@@ -5,10 +5,9 @@ import requests
 document_id = "1c6HTfHQfp7MIg1LFo6_wFOzKLIHA1rzVpDxXIPosRQ0"
 
 def sheet_to_df(sheet_id: int, document_id = document_id) -> pd.DataFrame:
-    
     """ Function that takes in a google sheet's id number and document id as input and returns
         the dataframe of the particular sheet as output """
-    
+        
     # CSV download link
     csv_url = f"https://docs.google.com/spreadsheets/d/{document_id}/export?format=csv&gid={sheet_id}"
 
@@ -17,7 +16,7 @@ def sheet_to_df(sheet_id: int, document_id = document_id) -> pd.DataFrame:
     csv_data = response.content
 
     # Save the CSV data to a file
-    csv_file = "ROI simplified visualizations.csv"
+    csv_file = "visualizations.csv"
     with open(csv_file, "wb") as file:
         file.write(csv_data)
 
