@@ -4,7 +4,7 @@ import requests
 
 document_id = "1c6HTfHQfp7MIg1LFo6_wFOzKLIHA1rzVpDxXIPosRQ0"
 
-def sheet_to_df(sheet_id: int, name: str document_id = document_id) -> pd.DataFrame:
+def sheet_to_df(sheet_id: int, name: str, document_id = document_id) -> pd.DataFrame:
     """ Function that takes in a google sheet's id number and document id as input and returns
         the dataframe of the particular sheet as output """
         
