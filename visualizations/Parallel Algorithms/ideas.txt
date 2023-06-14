@@ -1,0 +1,6 @@
+For parallel algos, here are a few ways to visualize the speedup:
+
+- Sort by family name and year and plot the decrease in run time
+- 
+
+Use 
