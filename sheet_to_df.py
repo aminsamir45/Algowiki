@@ -16,7 +16,7 @@ def sheet_to_df(sheet_id: int, name: str, document_id = document_id) -> pd.DataF
     csv_data = response.content
 
     # Save the CSV data to a file
-    csv_file = f"{name}_visualizations.csv"
+    csv_file = f"{name}.csv"
     with open(csv_file, "wb") as file:
         file.write(csv_data)
 
