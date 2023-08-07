@@ -1,0 +1,962 @@
+ ,Family Name,Looked at?,Variation,Algo ID,Algorithm Description,Final Call,Exact Problem Statement?,Exact?,Time Complexity (Average),Average Case Distribution,Reference?,,Algorithm Name,Year,Paper/Reference Link,Constants,Derived?,Paper Reference for Constants,Time Complexity Improvement?,Transition Class,Time Complexity Class,Param: Time Class,Time Complexity (Worst Only),Parallel Algorithm Span/Depth,Parallel Algorithm Span References,Parallel Algorithm Work,Parallel Algorithm Work References,Reference mentions work efficiency?,Parameter definitions,Preferred Parameter,Time Complexity Reference,Derived Time Complexity?,Computational Model,Unit of Space,Space Complexity Class,Param: Space Class,Space Complexity (Auxiliary),Space Complexity Reference,Derived Space Complexity?,Space Complexity in Original Paper?,Interesting Space Complexity?,Randomized?,"Type of Randomized Algorithm (e.g. Las Vegas, Monte Carlo, Atlantic City)",Approximate?,Approximation Factor (if approximate algorithm),Heuristic-based?,Parallel?,"# of
+Processors",Quantum?,GPU-based?,Other References,Problem Statement,Notes,"Algorithm family
+parameters",Description of Inputs,Ratios of input parameter sizes,Space n = 1000 value,Space n = 1000 rate,Space n = 10^6 value,Space n = 10^6 rate,Space n = 10^9 value,Space n = 10^9 rate,n = 1000 value,n = 1000 scale,n = 1000 Rate,n = 10^6 value,n = 10^6 scale,n = 10^6 Rate,n = 10^9 value,n = 10^9 scale,n = 10^9 Rate,Starting Complexity,Remarks,Papers for ratio evaluations,Domains
+1,Sorting,1,,,,,,,,,,,odd-even sort - Batcher,1968,https://dl.acm.org/doi/abs/10.1145/1468075.1468121,,,,,,,,O(log^2(n)),O(log^2(n)),,O(nlog^4(n)),,,n: size of list,,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167,,sorting network,,,,,,,,,,,,,,1,O(n log^2(n)),,,"first found in https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167 
+mentioned in https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref; https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf)
+classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329
+also https://link.springer.com/chapter/10.1007/BFb0028577",,,1,n is the size of the array to be sorted.,,,,,,,,99,10101.0101,,,,,,,,4,,,Combinatorics
+1,Sorting,1,,,,,,,,,,,bitonic sort - Batcher,1968,https://dl.acm.org/doi/abs/10.1145/1468075.1468121,,,,,,,,O(log^2(n)),O(log^2(n)),,O(nlog^4(n)),,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,O(n log^2(n)),,,"mentioned in https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref
+also https://link.springer.com/chapter/10.1007/BFb0028577",,,1,n is the size of the array to be sorted.,,,,,,,,1000000,1,,,,,,,,4,,,Combinatorics
+1,Sorting,1,,,,,,,1.39(n+1)log n - 2.85n +2.15,,,,SampleSort,1970,https://dl.acm.org/doi/abs/10.1145/321592.321600,,,,,,,,O(nlogn),O(logn),,O(nlogn),,,,,,,sorting network,,,,,,,,,1,,,,,1,varies,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,"network sorting algo, perfect shuffle",,,,,,,,Stone,1971,https://ieeexplore.ieee.org/abstract/document/1671798,,,,,,,,O(log^2(n)),O(logn),,O(nlogn),,,,,https://ieeexplore.ieee.org/abstract/document/1671798,,sorting network,,,,,,,,,,,,,,,n/2,,,mentioned in https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref; https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,"n-sorter network, generalization of divide-sort-merge strategy",,,,,,,,Van Voorhis,1971,https://apps.dtic.mil/sti/citations/AD0737270,,,,,,,,O(log^2(n)),O(log^2(n)),,O(nlog^4(n)) ??,,,,,https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref,,sorting network,,,,,,,,,,,,,,1,0.25nlog^2(n)-0.372nlog(n)+O(n),,,mentioned in https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref; https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,19,,,1,1,O(n²),Any distribution,Same general behavior across inputs,[https://www.semanticscholar.org/paper/Parallel-Neighbor-Sort-(or-the-Glory-of-the-Habermann/bc7b6efb99aae6225239425747fd0169a51f30ce Odd Even Sort Parallel  Implementation // parallel neighborhood sort - Habermann (1972)],Odd Even Sort Parallel  Implementation // parallel neighborhood sort - Habermann,1972,https://www.semanticscholar.org/paper/Parallel-Neighbor-Sort-(or-the-Glory-of-the-Habermann/bc7b6efb99aae6225239425747fd0169a51f30ce,,,,0,0,5,n: 5,O(n^2/p),$O(n)$,https://www.semanticscholar.org/paper/Parallel-Neighbor-Sort-(or-the-Glory-of-the-Habermann/bc7b6efb99aae6225239425747fd0169a51f30ce,$O(n^2)$,https://www.semanticscholar.org/paper/Parallel-Neighbor-Sort-(or-the-Glory-of-the-Habermann/bc7b6efb99aae6225239425747fd0169a51f30ce,yes (compares to quicksort),n: size of list,n,,,Word RAM,words,1,n: 1,O(1),in-situ,0,1,,0,,0,,0,1,"p, at most O(n)",0,0,"https://en.wikipedia.org/wiki/Odd%E2%80%93even_sort ;
+on implementation: https://www.sciencedirect.com/science/article/pii/0167819186900098",A sorting algorithm is an algorithm that puts elements of a list in a certain order.,,,,,,,,,,,,,,,,,,,,4,,,Combinatorics
+1,Sorting,1,,,,,,,,,,,Shellsort on sorting networks- Pratt,1972,https://apps.dtic.mil/sti/citations/AD0740110 (pdf page 42 ish),1/1.58,,https://apps.dtic.mil/sti/citations/AD0740110,,,,,O(log^2(n)),O(log^2(n)),,$O(n\lg^2(n))$,,,,,,,sorting network,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,external parallel sorting,,,,,,,,parallel tape sort - Even (1),1974,https://dl.acm.org/doi/abs/10.1145/360924.360941,,,,,,,,O(n/p log n + n),O(n),,O(n log n + np),,yes,"n: size of list
+p: number of processors",,,,"""external sorting"" ?",,,,,,,,,,,,,,1,p,,,mentioned in https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref; https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,external parallel sorting,,,,,,,,parallel tape sort - Even (2),1974,https://dl.acm.org/doi/abs/10.1145/360924.360941,,,,,,,,O(n),O(n),,O(nlog(n)),,yes,n: size of list,,,,"""external sorting"" ?",,,,,,,,,,,,,,1,O(log(n)),,,mentioned in https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref; https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,,,,,,,,,,"Parallel Neighborhood sort - Baudet, Stevenson",1975,https://kilthub.cmu.edu/articles/Optimal_sorting_algorithms_for_parallel_computers/6608162/files/12099023.pdf,,,,,,,,"O(n log(n)/k +n)
+or O(n) if k=log n",O(n),,O(n log n),https://kilthub.cmu.edu/articles/Optimal_sorting_algorithms_for_parallel_computers/6608162/files/12099023.pdf,"if k=log n
+""optimal"" - 
+speedup=k
+efficiency=1","n: size of list
+k: number of processors",,,,SIMD,,,,,,,,,,,,,,1,k=log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,2,,,"shared memory parallel sorting, enumeration",,,,,,,,Muller and Preperata,1975,https://dl.acm.org/doi/pdf/10.1145/321879.321882,,,,,,,,O(log(n)),O(\lg(n)),,O(n^2),,,n: size of list,,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167,,sorting network,,,,,,,,,,,,,,1,O(n^2),,,"first found in https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167, mentioned in https://dl.acm.org/doi/abs/10.1145/2514.2516#sec-ref",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Parallel Merge Sort - Valiant,1975,https://epubs.siam.org/doi/abs/10.1137/0204030,,,,,,,,2logn*loglogn + 0(logn),2logn*loglogn + 0(logn),,O(n log n),https://epubs.siam.org/doi/abs/10.1137/0204030,,n: size of list,,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167,,sorting network,,,,,,,,,,,,,,1,n/2,,,first found in https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Gavril,1975,https://dl.acm.org/doi/abs/10.1145/361020.361216,,,,,,,,2[log2(2m -}- 1)] + [3m/p] -t- [m/p][log2(n/m)],,,,,,,,,,sorting network,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Drysdale, Young",1975,https://epubs.siam.org/doi/abs/10.1137/0204022,,,,,,,,0.25 log n (loglog n)^2-0.386log n loglog n +O(log n) ??,,,,,,n: size of list,,,,sorting network,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Parallel bucket-sort - Hirschberg (1),1977,https://dl.acm.org/doi/abs/10.1145/359576.359582,,,,,,,,O(log(n)),O(log n),,O(n log n),,,"n: size of list
+m-1: largest number in list",,https://dl.acm.org/doi/abs/10.1145/359576.359582,,SIMD-SM-R,,,,,,,,,,,,,,1,n,,,space complexity: O(nm),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,"""enumeration sorting""",,,,,,,,Parallel bucket-sort - Hirschberg (2),1977,https://dl.acm.org/doi/abs/10.1145/359576.359582,,,,,,,,O(klog(n)),O(log n),,O(klog(n)n^(1+1/k)) ?,,,"n: size of list
+m-1: largest number in list
+k: arbitrary int >=2",,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167,,SIMD-SM-R,,,,,,,,,,,,,,1,n^(1+1/k),,,"space complexity: O(nm)
+first found in https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,"Uses Valiant's [1975] merge technique; ""enumeration sorting"", allows fetch conflicts",,,,,,,,Preperata (1),1977,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167&tag=1,,,,,,,,O(log(n)),,,,,,n: size of list,,,,SIMD-SM-R ? (memory fetch conflicts),,,,,,,,,,,,,,1,n log(n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,"Uses Valiant's [1975] merge technique; ""enumeration sorting"", doesn't allow fetch conflicts",,,,,,,,Preperata (2),1977,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1675167&tag=1,,,,,,,,O(log(n)),,,,,,"n: size of list
+0>alpha<=1",,,,SIMD-SM ? (no memory fetch conflicts),,,,,,,,,,,,,,1,n^(1+alpha),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,s^2-way merge sort - Thompson and Kung (1),1977,https://dl.acm.org/doi/abs/10.1145/359461.359481,,,,,,,,O(sqrt(n)),O(sqrt(n)),,O(n sqrt(n)),,optimal within a factor of 2 for large n,"n: size of list (n=mxm, m assumed to be power of 2)",,,,"similar to ILLIAC IV machine, SIMD",,,,,,,,,,,,,,1,n,,,mentions lower bound,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,adaptation of Batcher's bitonic merge sort - Thompson and Kung (2),1977,https://dl.acm.org/doi/abs/10.1145/359461.359481,,,,,,,,O(sqrt(n)),O(sqrt(n)),,O(n sqrt(n)),,optimal within a factor of 4.5,"n: size of list (n=mxm, m assumed to be power of 2)",,,,"similar to ILLIAC IV machine, SIMD",,,,,,,,,,,,,,1,n,,,mentions lower bound,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Siegel,1977,https://dl.acm.org/doi/abs/10.1145/800255.810655,,,,,,,,O(log^2(n)),,,,,,,,,,SIMD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,Hardware sorter,,,,,,,,"Rebound sort - Chen, Lum, Tung",1978,https://dl.acm.org/doi/abs/10.5555/1286643.1286685,,,,,,,,,,,,,,,,,,hardware sorter ?,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Chen, Eswaran, Lum, Tung",1978,https://link.springer.com/article/10.1007/BF00991635,,,,,,,,(n+1)/2,(n-1) comparators,,,,,n: size of list,,,,hardware sorter,,,,,,,,,,,,,,1,n-1,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Todd,1978,https://ieeexplore.ieee.org/abstract/document/5390917,,,,,,,,2n+log n-1,O(n),,O(n log n),,,n: size of list,,,,hardware sorter,,,,,,,,,,,,,,1,log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,parallel tree sort,,,,,,,,Bentley and Kung,1979,https://www.eecs.harvard.edu/htk/static/files/bg891xp4727.pdf,,,,,,,,O(n),O(n),,O(n^2),https://www.eecs.harvard.edu/htk/static/files/bg891xp4727.pdf,mentions speedup,"n: size of list
+p: number of square nodes in tree
+log p<=n<=p",,,,"""suitable for VLSI implementation""",,,,,,,,,,,,,,,p?,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,adaptation of Batcher's bitonic sort on a mesh-connected processor array,,,,,,,,Nassimi and Sahni,1979,https://ieeexplore.ieee.org/abstract/document/1675216,,,,,,,,O(sqrt(n)),O(sqrt(n)),,O(n^3),,,n: size of list,,,,SIMD,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,network sorter,,,,,,,,Preperata and Vuillemin,1979,https://ieeexplore.ieee.org/abstract/document/4568010,,,,,,,,O(n/(logn)^2),,,,,,,,,,"network sorter? ""compliant with VLSI design""",,,,,,,,,,,,,,,,,,mentioned in https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,"Hardware sorter; block access memory, has two processor-to-processor interconnections",,,,,,,,odd-even sort - Hsiao and Menon (1),1980,https://apps.dtic.mil/sti/citations/ADA090192,,,,,,,,O(n/p log(n/p) + n),O(n/p log(n/p) + n),,O(n log(n/p) + np),,YES,"n: size of list
+p: number of processors
+n restricted (only) to memeory size of each processor = n/p",,,,hardware sorter ?,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,"Hardware sorter; block access memory, has two processor-to-processor interconnections",,,,,,,,modified Stone sort - Hsiao and Menon (2),1980,https://apps.dtic.mil/sti/citations/ADA090192,,,,,,,,O(n/p log(n/p) + n/p log^2(p)),O(n/p log(n/p) + n/p log^2(p)),,O(n log(n/p) + n log^2(p)),,YES,"n: size of list
+p: number of processors
+p - has to be a power of 2
+n restricted (only) to memeory size of each processor = n/p",,,,hardware sorter ?,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,hardware sorter; only works for specific number of processors - once built works only for the given value of p,,,,,,,,specialized minimum time sort - Hsiao and Menon (3),1980,https://apps.dtic.mil/sti/citations/ADA090192,,,,,,,,O(n/p log(n/p)),O(n/p log(n/p)),,O(n log(n/p)),,YES,"n: size of list
+p: number of processors
+n restricted (only) to memeory size of each processor = n/p",,,,hardware sorter ?,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Chung et al.,1980,https://ieeexplore.ieee.org/abstract/document/5390784,,,,,,,,O(n),,,,,,,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"uniform ladder - Chin, Fok (1)",1980,https://ieeexplore.ieee.org/abstract/document/1675633,,,,,,,,O(N^2),,,,,,,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"sorting on two or more ladders - Chin, Fok",1980,https://ieeexplore.ieee.org/abstract/document/1675633,,,,,,,,2n+1,,,,,,,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,two round sorting,,,,,,,,Haggkvist and Hell,1981,https://epubs.siam.org/doi/abs/10.1137/0210034,,,,,,,,2 // O(1),O(1),,O(n^(3/2)log(n)),,,,,https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5,,,,,,,,,,,,,,,,1,O(n^(3/2)log(n)),,,"mentioned in https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf)
+mentions lower bounds",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Lee et al.,1981,https://ieeexplore.ieee.org/abstract/document/1675805,,,,,,,,(log2 k) * (log2 k + 3) * k * n/2,,,,,,k is the number of chips of data to be merged and n is the number of elements in each chip,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Shiloach and Vishkin,1981,https://link.springer.com/chapter/10.1007/BFb0105127,,,,,,,,"O(n/p log n + log n log p) for p<=n
+O(log^2(n)/log(p/n) + log n) for p>=n",O(log n),,O(n log n) if p<n or O(p log n) if p>=n,,"optimal for p<=n/log n,
+same result for p=ceiling(n^(1+1/k)) as Hirschberg '78 and Preperata '78","n: size of list
+p: number of processors",,,,SIMD-R ??,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,randomized,,,,,,https://ieeexplore.ieee.org/abstract/document/4568337,,Reischuk,1981,https://ieeexplore.ieee.org/abstract/document/4568337,,,,,,,,O(logn),O(log n) expected,,O(n log n) expected,,,n: size of list,,,,CREW PRAM,,,,,,,,,1,,,,,1,n,,,mentioned in https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,hardware sorter,,,,,,,,Dohi et al.,1982,https://dl.acm.org/doi/abs/10.1145/1067649.801730,,,,,,,,n b tau (a+1+(n-l)/2^(l-1)),n b tau (a+1+(n-l)/2^(l-1)),,2^l n b tau (a+1+(n-l)/2^(l-1)),,,"n: size of list (power of two)
+b: length of data items in bytes
+l: level of bottom processors
+tau=1/T: average time to send byte from node after sorting
+M: bus transfer rate
+a=T/M",,,,hardware sorter,,,,,,,,,,,,,,1,2^l,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Parallel enumeration sorting scheme - Yasuura et al.,1982,https://ieeexplore.ieee.org/abstract/document/1675943,,,,,,,,,,,,,,,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"N&S sort - Nassimi, Sahni",1982,https://dl.acm.org/doi/pdf/10.1145/322326.322329,,,,,,,,O(k log n),O(log n),,O(n^(1+1/k)k log n),,,"n: size of list (power of two ?)
+1<=k<=log n",,,,"network sorter, SIMD (Cube connected and perfect shuffle)",,,,,,,,,,,,,,1,n^(1+1/k),,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Cheung, Dhall, Lakshmivarahan, Miller, Walker",1982,https://dl.acm.org/doi/abs/10.1145/800174.809751,,,,,,,,O(n),O(n),,O(n log n),,,n: size of list,,,,"""we assume a model of
+synchronous distributed control where all the processors have the same set of instructions which are
+executed in the same order""",,,,,,,,,,,,,,1,O(log n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,,"""sorting network""; expander graphs, epsilon-halving, epsilon-nearsort",,,,,,,,"Ajtai, Komlos, Szemeredi (AKS)",1983,https://dl.acm.org/doi/pdf/10.1145/800061.808726,"""very large""; ""unsuitable for actual implementation""",,https://dl.acm.org/doi/pdf/10.1145/800061.808726,,,,,O(log(n)),O(log(n)) ?,https://dl.acm.org/doi/pdf/10.1145/800061.808726,O(n log^2(n)) ?,https://dl.acm.org/doi/pdf/10.1145/800061.808726,,n: size of list,n,,,"""comparator network - deterministic sequence of switches"" ??",,,,,,,,,,,,,,1,n log(n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Kumar and Hirschberg,1983,https://ieeexplore.ieee.org/abstract/document/1676217,,,,,,,,11n^(1/2)t_r+2log n^(1/2) t_c +5/2 n^(1/2) t_e,11n^(1/2)t_r+2log n^(1/2) t_c +5/2 n^(1/2) t_e,,11n^(3/2)t_r+2nlog n^(1/2) t_c +5/2 n^(3/2) t_e,,,"n: size of list
+t_r: routing time
+t_c: compare-exchange time
+t_e: exchange time",,,,"network sorter, SIMD ?",,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Thompson,1983,https://link.springer.com/chapter/10.1007/978-3-642-68402-9_13 (page 119 in pdf),,,,,,,,,,,,,,,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Kruskal,1983,https://ieeexplore.ieee.org/abstract/document/1676138/authors#authors,,,,,,,,1.893 log n loglog n / logloglog n,ceiling(log n/log G)((G-1)/floor(p/n)+log((G-1)/floor(p/n))+3/log3 loglog(p^2/n) +6) +O(Gn/p) = ??,https://ieeexplore.ieee.org/abstract/document/1676138/authors#authors,O(n log n loglog n / logloglog n),,,"n: size of list
+p: number of processors
+G: number of processor groups",,,,CREW PRAM,,,,,,,,,,,,,,,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Bilardi and Preperata,1983,https://dl.acm.org/doi/abs/10.1145/800057.808666,,,,,,,,O(log n),,,,,,,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Akl,1983,https://link.springer.com/article/10.1007/BF02243071,,,,,,,,O(n^epsilon),approaching O(1) ?,,O(nlog n),https://link.springer.com/article/10.1007/BF02243071,,"n: size of list
+0<epsilon<1",,,,SIMD,,,,,,,,,,,,,,1,n^(1-epsilon),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,randomized,,,,O(log n),,,,Reif and Valiant,1983,https://dl.acm.org/doi/abs/10.1145/800061.808727,,,,,,,,O(alpha log n) w/ high (1-n^(-alpha)) probability for big alpha,O(log n) expected,,O(n log n) expected,,,n: size of list,,,,sorting network,,,,,,,,,1,,,,,1,n,,,mentioned in https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,two round sorting,,,,,,,,Bollobas and Thomason,1983,https://www.sciencedirect.com/science/article/pii/0166218X83900951,,,,,,,,2 // O(1),O(1),,O(n^(3/2)log(n)),,,,,https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5,,,,,,,,,,,,,,,,1,O(n^(3/2)log(n)),,,mentioned in https://link.springer.com/chapter/10.1007/978-94-009-5315-4_5 (paper starts p184 in pdf),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Huang, Chow",1983,https://www.osti.gov/biblio/5170114,,,,,,,,,,,,,,,,,,sorting network,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Miranker, Tang, Wong",1983,https://ieeexplore.ieee.org/abstract/document/5390461,,,,,,,,,,,,,,,,,,hardware sorter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,Non-Comparison Sorting,25,,,1,1,O(n),Any distribution,need to read entire input,[https://link.springer.com/chapter/10.1007/978-94-009-2794-0_11 Spaghetti Sort Parallel Implementation - Steiglitz (1984)],Spaghetti Sort Parallel Implementation - Steiglitz,1984,https://link.springer.com/chapter/10.1007/978-94-009-2794-0_11,,,,0,0,3,n: 3,O(n),,,,,,n: size of list,n,,,???,words,1,n: 1,O(1) auxiliary? per processor?,"Assuming getting the spaghetti rods doesn't take up any auxiliary space, the only auxiliary space in this algorithm involves the table and the hands, each using O(1) space",1,0,,0,,0,,0,1,,0,0,https://en.wikipedia.org/wiki/Spaghetti_sort,A sorting algorithm is an algorithm that puts elements of a list in a certain order.,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Cyclic sort - Johnsson (1),1984,http://cs-www.cs.yale.edu/publications/techreports/tr439.pdf,,,,,,,,"O(n log n/p) when p<<n
+O(log^2(n)) when n~=p",O(log^2(n)),,"O(np log n/p) when p<<n
+O(nlog^2(n)) when n~=p",,,"n: size of list
+p: number of processors (power of 2)",,,,MIMD,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Consecutive sort - Johnsson (2),1984,http://cs-www.cs.yale.edu/publications/techreports/tr439.pdf,,,,,,,,"O(n log n/p) when p<<n
+O(log^2(n)) when n~=p",O(log^2(n)),,"O(np log n/p) when p<<n
+O(nlog^2(n)) when n~=p",,,"n: size of list
+p: number of processors (power of 2)",,,,MIMD,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Bucket sort - Johnsson (3),1984,http://cs-www.cs.yale.edu/publications/techreports/tr439.pdf,,,,,,,,"O(n/p+L) when p<=L
+O(n/p+L+log p log L) when p>L",O(n/p+L+log p log L) when p>L,,"O(n+pL) when p<=L
+O(n+pL+plog p log L) when p>L",,,"n: size of list
+p: number of processors (power of 2)
+L: number of buckets elements are sorted into",,,,MIMD,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"re-circulating systolic sorter (RSS) - Wong, Ito",1984,https://academic.oup.com/comjnl/article/27/3/260/367818,,,,,,,,O(n),O(n),,O(n^2),,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,O(n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-Comparison Sorting,,integer sort,,,,,,,,Reif,1985,https://ieeexplore.ieee.org/abstract/document/4568176,,,,,,,,O(log(n)),O(log(n)) expected,,O(n) expected,,"""optimal"" - efficiency=1",n: size of list,,,,Parallel RAM,,,,,,,,,1,,,,,1,n/log(n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(log n),,,,Reischuk,1985,https://epubs.siam.org/doi/abs/10.1137/0214030,,,,,,,,O(log n) w/ high probability,O(log n) expected,,O(n log n) expected,,,n: size of list,,,,PRAM,,,,,,,,,1,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,n-sorter - Tseng and Lee,1985,https://link.springer.com/article/10.1007/BF00991185,,,,,,,,O(n(log^2(nm)),,,,,,"n: arbitrary number
+nm: size of list, m=multiple of n",,,,hardware sorter ?,,,,,,,,,,,,,,,nm ?,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Lang, Schimmler, Schmeck and Schroder",1985,https://ieeexplore.ieee.org/abstract/document/1676603/,7,,https://ieeexplore.ieee.org/abstract/document/1676603/,,,,,O(n^(1/2)),O(n^(1/2)),,O(n^(3/2)),,,n: size of list,,,,network or hardware (VLSI) sorter ?,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Akl,1985,https://www.sciencedirect.com/science/article/abs/pii/B9780444878069500062,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Owens, JaJa",1985,https://ieeexplore.ieee.org/abstract/document/5009391,,,,,,,,O(n +n^2/p^2),O(n),,O(np +n^2/p),,,"n: size of list
+p: number of processors
+1<=p<=n",,,,sorting network (serial memories),,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Owens, JaJa",1985,https://ieeexplore.ieee.org/abstract/document/5009391,,,,,,,,O(n/sqrt(p) +n^2/p^2),O(sqrt(n)),,O(n sqrt(p) +n^2/p),,,"n: size of list
+p: number of processors
+1<=p<=n",,,,sorting network (serial memories),,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Rudolph,1985,https://ieeexplore.ieee.org/abstract/document/5009383,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n log^2(n)),,,n: size of list,,,,sorting network (fault tolerant),,,,,,,,,,,,,,1,n/2,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,parallel internal shuffle sort - Menon,1986,https://www.vldb.org/conf/1986/P197.PDF,,,,,,,,n/p(C+V)(log p + log^2 p) + n/pV + n/p log(n/(pk))C,?,,n(C+V)(log p + log^2 p) + nV + nlog(n/(pk))C,,,"n - size of list
+p - number of processors
+M=n/p - number of records per processor
+B=n/pk - number of pages per processor local memory
+k - number of records per page  (M=Bk)
+C- time to compare two keys
+V - time to move a record in memory",,,,"""internal sorting""",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,parallel odd even external sort - Menon,1986,https://www.vldb.org/conf/1986/P197.PDF,,,,,,,,(N/(2p)log(N/(2p))+N)C,NC ?,,(N/2log(N/(2p))+pN)C,,,"N: number of pages
+p: number of processors
+C: time to read, merge and write 2 pages",,,,"""external sorting""",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,parallel B-ary odd even sort - Menon,1986,https://www.vldb.org/conf/1986/P197.PDF,,,,,,,,(N/(Bp)log_B(N/(Bp))+(2N)/B)C_B,O(NC_B) ?,,(N/B log_B(N/(Bp))+(2Np)/B)C_B,,,"N: number of pages
+p: number of processors
+B: number of pages per processor local memory
+C: time to read, merge and write 2 pages",,,,"""external sorting""",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,block bitonic sort - Menon,1986,https://www.vldb.org/conf/1986/P197.PDF,,,,,,,,,,,,,,,,,,"""external sorting""",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (integer) sorting,,,,,,,,,,"Wagner, Han",1986,http://h.web.umkc.edu/hanyij/html/research/icpp86.pdf,,,,,,,,O(ceiling(log m/ log(n/p + log p))(n/p+log p),"O(celing(log m/loglog n)log n) ?? [assumed n=p, could have a better result]",,O(ceiling(log m/ log(n/p + log p))(n+p log p),,yes,"n: size of list (ints in range 1,2,...m)
+p: number of processors",,,,"EREW, CREW PRAM",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Schnorr, Shamir",1986,https://dl.acm.org/doi/pdf/10.1145/12130.12156,3,https://dl.acm.org/doi/pdf/10.1145/12130.12156,,,,,,O(n^(1/2)),O(n^(1/2)),,O(n^(3/2)) ?,,,n: size of list,,,,"sorting network, suitable for VLSI",,,,,,,,,,,,,,1,n ?,,,also mentions lower bounds,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Kunde,1986,https://link.springer.com/chapter/10.1007/3-540-16811-7_187,12,https://link.springer.com/chapter/10.1007/3-540-16811-7_187,,,,,,O(n^(1/3)),O(n^(1/3)),,O(n^(4/3)) ?,,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,n ?,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"2-way sorter - Akl, Schmeck",1986,https://www.sciencedirect.com/science/article/pii/0167819186900037?via%3Dihub,,,,,,,,((ceiling(m/2)+1)n+k)t,,,,,,"n: length of each sequence
+m: number of sequences
+k: bits of each number in sequence
+a: area of bit-level building block
+t: time of bit-level building block",,,,hardware sorter; systolic architecture,,,,,,,,,,,,,,,area=n(k+1)a/2,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Alon, Azar, Vishkin",1986,https://ieeexplore.ieee.org/abstract/document/4568241,,,,,,,,k rounds,O(1) ?,,,O(n^(1+1/k)) expected,,"n: size of list
+p: number of processors
+k: number of rounds (k>=1)",,,,PRAM,,,,,,,,,1,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (integer) sorting,,,,,,,,,,Hagerup,1987,https://www.sciencedirect.com/science/article/pii/0890540187900629,,,,,,,,O(log n),O(log n),,O(n loglog n),,yes,n: size of list,,,,CRCW PRAM,,,,,,,,,,,,,,1,n loglog n/ log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Akl, Santoro",1987,https://ieeexplore.ieee.org/abstract/document/5009478,,,,,,,,O(log^2(p)+n/p log n),O(log^2(n)) ??,,O(plog^2(p)+n log n),,optimal when p<=n/log^2(n),"n: size of list
+p: number of processors",,,,EREW PRAM,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Wagar,1987,https://books.google.com/books?hl=lv&lr=&id=fEbjEWonG0UC&oi=fnd&pg=PA292&ots=fC9nnDVJE0&sig=ZGyzsyom4bqdpP8kGEVWEannSKo#v=onepage&q&f=false,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Kunde,1988,https://link.springer.com/chapter/10.1007/BFb0040409,,,,,,,,rn+O(n^(1-1/r)),rn+O(n^(1-1/r)),,rn^2+O(n^(2-1/r)),,yes,"n: size of list
+r: dimensions of processor mesh",,,,MIMD + describes comp model w/ assumptions,,,,,,,,,,,,,,,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,1,1,O(logn),,,[https://epubs.siam.org/doi/abs/10.1137/0217049 Parallel Merge Sort - Cole (1) (1988)],Parallel Merge Sort - Cole (1),1988,https://epubs.siam.org/doi/abs/10.1137/0217049,5/2,,https://epubs.siam.org/doi/abs/10.1137/0217049,,,,,O(logn),$O(log n)$,https://epubs.siam.org/doi/abs/10.1137/0217049,$O(n log n)$,https://epubs.siam.org/doi/abs/10.1137/0217049,yes?,n: size of list,,,,CREW PRAM,words,,,,,,,,0,,0,,0,1,n,0,0,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",A sorting algorithm is an algorithm that puts elements of a list in a certain order.,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting ,1,,,,,1,1,O(logn),,,[https://epubs.siam.org/doi/abs/10.1137/0217049 Parallel Merge Sort - Cole (2) (1988)],Parallel Merge Sort - Cole (2),1988,https://epubs.siam.org/doi/abs/10.1137/0217049,5,,https://epubs.siam.org/doi/abs/10.1137/0217049,,,,,O(logn),$O(log n)$,https://epubs.siam.org/doi/abs/10.1137/0217049,$O(n log n)$,https://epubs.siam.org/doi/abs/10.1137/0217049,yes?,n: size of list,,,,EREW PRAM,words,,,,,,,,0,,0,,0,1,n,0,0,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",A sorting algorithm is an algorithm that puts elements of a list in a certain order.,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,,,,,,,,,,Francis and Mathieson,1988,https://ieeexplore.ieee.org/abstract/document/9738,,,,,,,,O(n log n/p + n log p/p),O(log n),,O(n log n + n log p),,yes,"n: size of list
+p: number of processors",,,,MIMD,,,,,,,,,,,,,,1,p,,,space complexity = 2n,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,parallel shellsort - Quinn,1988,https://www.sciencedirect.com/science/article/pii/0167819188900750,,,,,,,,O(n^(3/2)),O(n^(3/2)),,O(pn^(3/2)),,,"n: size of list
+p: number of processors",,,,"""tightly coupled multiprocessor model""",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Quicksort with quickmerge - Quinn,1988,https://www.sciencedirect.com/science/article/pii/0167819188900750,,,,,,,,O((n/p)^2+p log(n/p)+n log p + p),O(n log n),,O(n^2/p+p^2 log(n/p)+np log p + p^2),,,"n: size of list
+p: number of processors",,,,"""tightly coupled multiprocessor model""",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Balanced bin sort - Won, Sahni",1988,https://link.springer.com/article/10.1007/BF00156678,,,,,,,,O((n/p)^2+p log p) ?,O(n log n) ?,,O(n^2/p+p^2 log p) ?,,,"n: size of list
+p: number of processors",,,,"sorting network, hypercube multicomputer",,,,,,,,,,,,,,1,p,,,discusses space complexity,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (integer) sorting,,,,,,O(log n),,,,"Rajesekaran, Reif",1989,https://epubs.siam.org/doi/abs/10.1137/0218041,,,,,,,,O(alpha log n) w/ high (1-n^(-alpha)) probability,O(log n) expected,,O(n) expected,,,"n: size of list
+alpha>1",,,,CRCW PRAM,,,,,,,,,1,,,,,1,n/log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(log n /loglog n),,,,"Rajesekaran, Reif",1989,https://epubs.siam.org/doi/abs/10.1137/0218041,,,,,,,,O(alpha log n /loglog n) w/ high (1-n^(-alpha)) probability,O(log n/loglog n) expected,,O (n(log n)^(1+epsilon)/loglog n) expected,,,"n: size of list
+epsilon>0
+alpha>1",,,,CRCW PRAM,,,,,,,,,1,,,,,1,n(log n)^epsilon,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (integer) sorting,,,,,,O(log n /loglog n),,,,"Rajesekaran, Reif",1989,https://epubs.siam.org/doi/abs/10.1137/0218041,,,,,,,,O(alpha log n /loglog n) w/ high (1-n^(-alpha)) probability,O(log n/loglog n) expected,,O(n(loglog n)) expected,,,"n: size of list
+alpha>1",,,,CRCW PRAM,,,,,,,,,1,,,,,1,n(loglog n)^2/log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"shearsort - Scherson, Sen",1989,https://ieeexplore.ieee.org/abstract/document/16500,,,,,,,,,,,,,,,,,,"SIMD, MIMD",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,,,,,,,,,,"Hagerub, Rub",1989,https://www.sciencedirect.com/science/article/pii/0020019089901385,,,,,,,,O(log^2(n)),O(log^2(n)),,n log n +O(n loglog n),https://www.sciencedirect.com/science/article/pii/0020019089901385,yes,,,,,EREW PRAM,,,,,,,,,,,,,,1,O(n/log n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,17,,,1,1,O(log²n),,,"[https://epubs.siam.org/doi/abs/10.1137/0218014 Bitonic Merge Sort Parallel Implementation - Bilardi, Nicolau (1989)]","Bitonic Merge Sort Parallel Implementation - Bilardi, Nicolau",1989,https://epubs.siam.org/doi/abs/10.1137/0218014,2,,https://epubs.siam.org/doi/abs/10.1137/0218014,0,0,2,n: 2,$O((n log n)/p)$,$O(log^2 n)$,https://epubs.siam.org/doi/abs/10.1137/0218014,$O(n log n)$,https://epubs.siam.org/doi/abs/10.1137/0218014,no,"n: size of list
+p: number of processors",n,,,PRAC (shared-memory multiprocessor of the EREW PRAM variety),words,1,n: 1,O(1),"Paper claims ""logspace uniform"", so with O(log n) words, this is constant # of words",0,1,,0,,0,,0,1,"p, at most O(n/log n)",0,0,-,A sorting algorithm is an algorithm that puts elements of a list in a certain order.,,1,n is the size of the array to be sorted.,,,,,,,,9965,100.3512293,,,,,,,,4,,,Combinatorics
+1,Sorting,1,Non-comparison (integer) sorting,,,,,,,,,,Parallel iterated bucket sort - Chlebus,1989,https://www.sciencedirect.com/science/article/pii/0020019089901208,,,,,,,,O(log n),O(log n),,O(n),,,"n: size of list
+(polynomial range integers ?)",,,,CRCW PRAM,,,,,,,,,1,,,,,1,n/log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,1,O(n/p log p +log^3(p) loxg(n/p)),,,,SmoothSort - Plaxton (adaptive),1989,https://www.proquest.com/docview/303808287?pq-origsite=gscholar&fromopenview=true,,,,,,,,O(n/p log^2(p)/loxg(n/p) + log^3(p)loxg(n/p)),O(log^3(n)) ?,,O(n log^2(p)/loxg(n/p) + p log^3(p)loxg(n/p)),,,"n: size of list
+p: number of processors (upper bound n=pq ?)",,,,sorting network,,,,,,,,,,,,,,1,p,,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,SmoothSort - Plaxton (nonadaptive),1989,https://www.proquest.com/docview/303808287?pq-origsite=gscholar&fromopenview=true,,,,,,,,O(n/p log^2(p) / log(n/(p log p))),O(log^2(n)/loglog n) ?,,O(n log^2(p) / log(n/(p log p))),,,"n: size of list
+p: number of processors",,,,sorting network,,,,,,,,,,,,,,1,p,,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,SquareSort - Plaxton,1989,https://www.proquest.com/docview/303808287?pq-origsite=gscholar&fromopenview=true,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n log^2(n)),,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,n,,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,1,O(n/p log n + p^2 log^2(n)),,,,Balanced-partition sort - Abali (1),1989,https://www.proquest.com/docview/303734068?pq-origsite=gscholar&fromopenview=true,,,,,,,,,,,O(n log n + p^3 log^2(n)) expected,,,"n: size of list
+p: number of processors",,,,"sorting network (hypercube), MIMD",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,1,O(n/p log n + p^2 log n),,,,One-step-partition sort - Abali (2),1989,https://www.proquest.com/docview/303734068?pq-origsite=gscholar&fromopenview=true,,,,,,,,,,,O(n log n + p^3 log n) expected,,,"n: size of list
+p: number of processors",,,,"sorting network (hypercube), MIMD",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,1,O(n/p log n + p^(1+1/e) log^(1+e)(n)),,,,Recursive-partition sort - Abali (3),1989,https://www.proquest.com/docview/303734068?pq-origsite=gscholar&fromopenview=true,,,,,,,,,,,O(n log n + p^(2+1/e) log^(1+e)(n)),,,"n: size of list
+p: number of processors
+e: arbitrary positive int",,,,"sorting network (hypercube), MIMD",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(n/p log(n/p) t_c +n/p t_s/r),,,,"parallel binsort 0 - Seidel, George (1)",1989,https://dl.acm.org/doi/abs/10.1145/63047.63102,,,,,,,,,O(1) expected ?,,O(n log(n/p) t_c +n t_s/r) expected,,yes,"n: size of list
+p=2^d (d-dimensional): number of processors
+t_c: unit of computational cost
+t_s/r unit of simultaneuos send and recieve cost",,,,sorting network (hypercube),,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(n/p log n t_c +n/p t_s/r),,,,"parallel binsort 1 - Seidel, George (2)",1989,https://dl.acm.org/doi/abs/10.1145/63047.63102,,,,,,,,,O(log n) expected ?,,O(n log n t_c +n t_s/r) expected,,yes,"n: size of list
+p=2^d (d-dimensional): number of processors
+assumes sample size s<<m/n
+t_c: unit of computational cost
+t_s/r unit of simultaneuos send and recieve cost",,,,sorting network (hypercube),,,,,,,,,1,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(n/p log n t_c +n/p t_s/r),,,,"parallel binsort 2 - Seidel, George (3)",1989,https://dl.acm.org/doi/abs/10.1145/63047.63102,,,,,,,,,O(log n) expected ?,,O(n log n t_c +n t_s/r) expected,,yes,"n: size of list
+p=2^d (d-dimensional): number of processors
+assumes sample size s<<m/n
+t_c: unit of computational cost
+t_s/r unit of simultaneuos send and recieve cost",,,,sorting network (hypercube),,,,,,,,,1,,,,,1,p,,,https://dl.acm.org/doi/abs/10.1145/800221.806719,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Periodic Balanced Sorting Network - Dowd, Perl, Rudolph, Saks",1989,https://dl.acm.org/doi/abs/10.1145/76359.76362,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n log^4(n)),,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,n/2 log^2(n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Aggarwal, Chandra, Snir",1989,https://dl.acm.org/doi/pdf/10.1145/72935.72937,,,,,,,,O(n log n/p + l log p),O(l log n),https://dl.acm.org/doi/pdf/10.1145/72935.72937,O(np log n/p + lp log p),,,"n: size of list
+p: number of processors
+l: number of elements in a block ?
+",,,,Block PRAM,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(log n),,,,"Martel, Gusfield",1989,https://www.sciencedirect.com/science/article/pii/0020019089901166,3 ?,,https://www.sciencedirect.com/science/article/pii/0020019089901166 (based on https://dl.acm.org/doi/abs/10.1145/5925.5930 ),,,,,O(log n) expected,O(log n) expected,,O(n log n) expected,,,n: size of list,,,,CRCW PRAM,,,,,,,,,1,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Goodrich, Kosaraju",1989,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=88c772d8772499449809af592f765e35b28e124e,,,,,,,,O(log n),O(log n),,O(n log n),,,n: size of list,,,,EREW and CREW Parallel Pointer Machine (PPM),,,,,,,,,,,,,,1,O(n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,,two-round sorting?,,,,,,,,"Takefuji, Lee",1990,https://ieeexplore.ieee.org/abstract/document/62417,,,,,,,,2,O(1),,O(n^2),,,,,,,neural network?,,,,,,,,,,,,,,1,"O(n^2) - n^2 neurons, n(n-2)/2 comparators",,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Takefuji, Lee, Tanaka",1990,https://ieeexplore.ieee.org/abstract/document/5726926?casa_token=oYObtFxF3TIAAAAA:HVNZphHaWr5qQTicDCBB5dqHgjub4CmipxOEJ8UwRUnzokUuFQl9x8GCkgTV0UFlAFCZFYuggw,,,,,,,,2,O(1),,O(n^2),,,n: size of list,,,,neural network,,,,,,,,,,,,,,1,O(n^2) binary neurons,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (integer) sorting,,,,,,,,,,"Hagerup, Shen",1990,https://www.sciencedirect.com/science/article/pii/002001909090097H,,,,,,,,O(log n),O(log n),,O(n),,,n: size of list,,,,EREW PRAM,,,,,,,,,,,,,,1,O(n/log n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,O(log n/loglog n+loglog m),,,,Raman,1990,https://link.springer.com/chapter/10.1007/3-540-53487-3_42,,,,,,,,O(log n/loglog n+loglog m) w/ very high probability,O(log n/loglog n+loglog m) expected,,O(n loglog m) expected,,,"n: size of list
+ints in range 0...m-1",,,,CRCW PRAM,,,,,,,,,1,,,,,1,,,,O(n) space complexity,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,,,,,,,,,,"Sharesort - Cypher, Plaxton",1990,https://dl.acm.org/doi/pdf/10.1145/100216.100240,,,,,,,,O(log n (loglog n)^2),O(log n (loglog n)^2),,O(n log n (loglog n)^2),,,n: size of list,,,,"network sorter (hypercube, shuffle-exchange or CCC), ""SIMD fashion""",,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(log n),,,,"Leighton, Plaxton",1990,https://ieeexplore.ieee.org/abstract/document/89545,,,,,,,,O(log n) w/ very high probability,O(log n) expected,,O(n log n) expected,,,n: size of list,,,,sorting network,,,,,,,,,1,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(m + log n),,,,"Leighton, Plaxton",1990,https://ieeexplore.ieee.org/abstract/document/89545,,,,,,,,O(m + log n) w/ very high probability,O(m+log n) expected,,O(mn log n + nlog^2(n)) expected,,,"n: size of list
+of m-bit records",,,,sorting network,,,,,,,,,1,,,,,1,n log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Peterson,1990,https://link.springer.com/article/10.1007/BF01840378,,,,,,,,O(log n),O(log n),,O(n log n),,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Abali, Ozguner, Bataineh",1990,https://ieeexplore.ieee.org/abstract/document/555388,,,,,,,,O(n log n/p + p log^2(n)),"O(n log n/p + p log^2(n)) ??
+O(n log n) ???",,O(n log n) ?? assuming n>>p,,,"n: size of list
+p=2^d: number of processors on a d-dimensional hypercube
+n>>p",,,,sorting network,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"AGGARWAL, CHANDRA, SNIR",1990,https://www.sciencedirect.com/science/article/pii/030439759090188N,,,,,,,,O(n log n /p),O(log n) ?,,O(n log n/(p log(n/p))),https://www.sciencedirect.com/science/article/pii/030439759090188N,,"n: size of list
+p: number of processors
+1<=p<=n",,,,LPRAM,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Kruskal, Rudolph, Snir",1990,https://link.springer.com/article/10.1007/BF01840376,,,,,,,,O(n/p log n/log(n/p) +m/p),O(log n +m/n),,O(n log n/log(n/p) +m),,,"n: size of list
+in range 0...m-1
+p: number of processors
+p<=n/2",,,,"EREW PRAM, MIMD machine",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Wang, Chen, Lin",1990,https://scholars.lib.ntu.edu.tw/bitstream/123456789/118003/1/09.pdf,,,,,,,,O(1),O(1),,O(n^3),,,n: size of list,,,,processor array (with reconfigurable bus system),,,,,,,,,,,,,,1,n^3,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Dey, Srimani",1990,https://academic.oup.com/comjnl/article/33/3/241/365150,4,,https://academic.oup.com/comjnl/article/33/3/241/365150,,,,,O(log n),O(log n),,O(n^2),,,n: size of list,,,,SIMD,,,,,,,,,,,,,,1,n^2/log n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Parasort - Wheat, Evans",1990,https://www.sciencedirect.com/science/article/pii/016781919290114M,,,,,,,,O((n/p)^2 +(5n/(3p) + 2 log^2(n/p) +1)log(p+1) + 2 log^3(p+1)/3 + p),O(n),,O(n^2/p +(5n/3 + 2p log^2(n/p) +p)log(p+1) + 2p log^3(p+1)/3 + p),,,"n: size of list
+p: number of processors",,,,MIMD,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,Comparison sorting,,,,,,n log n/(k log k),,,,"Beigel, Gill",1990,https://ieeexplore.ieee.org/abstract/document/53587?casa_token=9GnOrfv-aycAAAAA:z4VGcYl6keco84NPIoAMrWx6_DhaQh7yoBV5KtnnkiTkrjeUeynas8o5FQxLC39YGfmHTSCNLA,,,,,,,,4n/k log_k(n),4n/k log_k(n),,,,,k-sorter: sorts k elements in constant time,,,,hardware sorter ?,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Powers,1990,https://sites.cs.ucsb.edu/~gilbert/cs140/old/cs140Win2009/sortproject/ParallelQuicksort.pdf,,,,,,,,O(log n),O(log n),,O(n log n),,,n: size of list,,,,CRCW PRAM,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Paterson,1990,https://link.springer.com/article/10.1007/BF01840378,"""still too high to be practical""",,,,,,,O(log n),O(log n),,O(n log n),,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(log n),,,,"Heidelberger, Norton, Robinson",1990,https://ieeexplore.ieee.org/abstract/document/46289?casa_token=EH1cXGJiDmcAAAAA:cWEfm3FxEXfMA9Q9165CWoFfbV9KAvcsrKzyFUgJAHIpKw7wzvzmSVzulfwDa5Dr0RbLMc1MKA,,,,,,,,O(log^2(n)),O(log n) expected,,O(n log n) expected,,,n: size of list,,,,CRCW PRAM (assuming O(1) time feth-and-add),,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (integer) sorting,,,,,,,,,,"Bhatt, Diks, Hagerup, Prasad, Radzik, Saxena",1991,https://www.sciencedirect.com/science/article/pii/089054019190031V,,,,,,,,O(log n/loglog n + loglog m),O(log n/loglog n + loglog m),,O(n loglog m),https://www.sciencedirect.com/science/article/pii/089054019190031V,yes,"n: size of list - 
+integers from {0,...,m-1}",,,,arbitrary CRCW PRAM,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,O(log n loglog m) expected,,,,"Matias, Vishkin (random)",1991,https://www.sciencedirect.com/science/article/pii/019667749190034V,,,,,,,,O(log n loglog m) expected,O(log n loglog m) expected,,O(n loglog m) expected,https://www.sciencedirect.com/science/article/pii/019667749190034V,"yes, ""slower but more efficient by a factor of O(log n/loglog m)""","n: size of list
+integers in range 1..m",,,,arbitrary-CRCW PRAM,,,,,,,,,1,,,,,1,n/log n,,,space complexity = O(n),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Matias, Vishkin (deterministic)",1991,https://www.sciencedirect.com/science/article/pii/019667749190034V,,,,,,,,O(log n),O(log n),,O(n loglog m),,,"n: size of list
+integers in range 1..m",,,,min-CRCW PRAM,,,,,,,,,,,,,,1,n loglog m / log n,,,space complexity = O(nm^(1/c)) for fixed c>=1,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Nakano, Masuzawa, Takura",1991,https://search.ieice.org/bin/summary.php?id=e74-d_11_3894,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Guan, Langston",1991,https://www.computer.org/csdl/journal/tc/1991/05/t0596/13rRUx0geoZ,,,,,,,,,,,,,,,,,,EREW PRAM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Quick-Merge Sort (QMS) - Loots, Smith",1991,https://www.sciencedirect.com/science/article/pii/016781919290101C,,,,,,,,O(n/p log n) + O(n),O(n),,O(n log n) + O(np),https://www.sciencedirect.com/science/article/pii/016781919290101C,,"n: size of list
+p: number of processors",,,,sorting network,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Deo, Sarkar",1991,https://www.sciencedirect.com/science/article/pii/002002559190028S,,,,,,,,O(n/p log(n/p) + (n/p + log p log n)log(n/p),O(log^2(n)) ?,,O(n log(n/p) + (n + p log p log n)log(n/p),,,"n: size of list
+p: number of processors",,,,EREW PRAM,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Parallel Quicksort - Chlebus, Vrt'o",1991,https://www.sciencedirect.com/science/article/pii/074373159190040G,,,,,,,,O(log n) w/ high probability,O(log n) expected,,O(n log n) expected,,,n: size of list,,,,CRCW PRAM,,,,,,,,,1,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,10,,,1,1,O(nlogn),,,"[https://www.sciencedirect.com/science/article/pii/0196677492900166?via%3Dihub Cube Sort Parallel Implementation - Cypher, Sanz (1992)]","Cube Sort Parallel Implementation - Cypher, Sanz",1992,https://www.sciencedirect.com/science/article/pii/0196677492900166?via%3Dihub,,,,0,0,4,n: 4,$O(n log^2 n / (p log (n/p))$,$O(n log^2 n / (p log (n/p))$,https://www.sciencedirect.com/science/article/pii/0196677492900166?via%3Dihub,,https://www.sciencedirect.com/science/article/pii/0196677492900166?via%3Dihub,,"n: size of list
+p: number of processors",n,,,Parallel RAM,words,3,n: 3,O(n),(can be easily derived),1,0,,0,,0,,0,1,p,0,0,https://en.wikipedia.org/wiki/Cubesort,A sorting algorithm is an algorithm that puts elements of a list in a certain order.,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Varman, Doshi",1992,https://www.computer.org/csdl/journal/tc/1992/01/t0097/13rRUILLkD1,,,,,,,,O((n log n/p)+log/sup 2/ p),,,,,,"n: size of list
+p: number of processors",,,,,,,,,,,,,,,,,,,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Parallel sorting by regular sampling (PSRS) - Shi, Schaeffer",1992,https://www.sciencedirect.com/science/article/pii/074373159290075X,,,,,,,,O(n/p log n),0 (n/p log(n/p) + n/p log p + p log (n/p) + p^2 log p^2) = ??,,O(n),https://www.sciencedirect.com/science/article/pii/016781919390019H,assymptotically optimal when n>=p^3,"n: size of list
+p: number of processors",,,,MIMD,,,,,,,,,,,,,,1,p,,,"classified as ""merge based single-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"MeshSort (generalized Bitonic and Shear Sort) - Corbett, Scherson",1992,https://www.computer.org/csdl/journal/td/1992/05/l0626/13rRUxly9dj,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,,,,,"Rajesekaran, Sen",1992,https://www.cse.iitd.ac.in/~sSen/journals/acta.pdf,,,,,,,,O(n log n logloglog n / (p loglog n)),O(log n logloglog n),,O(n log n logloglog n / loglog n),,yes,"n: size of list
+p: number of processors",,,,CRCW and EREW PRAM,,,,,,,,,,,,,,1,p<=n/loglog(n),,,"space complexity = O(n)
+also gives another (randomized) algo ",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison Sorting,,,,,,O(log n / log k),,,,"Hagerup, Raman (comparsion)",1992,https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834884,,,,,,,,O(log n / log k) w/ high probability,O(1) expected,,O(kn log n /log k) expected,,,"n: size of list
+2<=k<=n",,,,arbitrary CRCW PRAM,,,,,,,,,1,,,,,1,kn,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,O(log*n),,,,"Hagerup, Raman (random ints)",1992,https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834884,,,,,,,,O(log*n) w/ high probability,O(log*n) expected,,O(n) expected,https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834884,,n: size of list,,,,OR CRCW PRAM,,,,,,,,,1,,,,,1,,,,space complexity = O(n),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,O(1),,,,"Hagerup, Raman (ints in range)",1992,https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834884,,,,,,,,O(1) w/ high probability,O(1) expected,,O(n) expected,,,"n: size of list
+integers in range 1..n",,,,OR CRCW PRAM,,,,,,,,,1,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,O(loglog n/log k),,,,"Hagerup, Raman (ints in range, stable)",1992,https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834884,,,,,,,,O(loglog n/log k) w/ high probability,O(1) expected,,O(kn loglog n/log k) expected,,,"n: size of list
+integers in range 1..n
+2<=k<=log n",,,,OR CRCW PRAM,,,,,,,,,1,,,,,1,kn,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,,,,,"Chen, Das",1992,https://www.sciencedirect.com/science/article/pii/002001909290078A,,,,,,,,O(n/p +log n),O(log n),https://www.sciencedirect.com/science/article/pii/002001909290078A,O(n),,yes,"n: size of list
+p: number of processors",,,,EREW PRAM,,,,,,,,,,,,,,1,O(p),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Padded-sort - Hagerup, Raman",1993,https://dl.acm.org/doi/pdf/10.1145/165231.157380,,,,,,,,n log n/log k (loglog k)^5(2^(O(log*n-log*k+1))),O(n (loglog n)^5) ?,,kn^2 log n/log k (loglog k)^5(2^(O(log*n-log*k+1))),,,"n: size of list
+4<k<n",,,,"CRCW PRAM (TOLERANT PRAM submodel, also works on ARBITRARY and PRIORITY PRAMs)",,,,,,,,,,,,,,,kn,,,also includes approximate and random algos,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,Comparison sorting,,,,,,,,,,"Kale, Krishnan",1993,https://ieeexplore.ieee.org/abstract/document/4134268,,,,,,,,local sort time + ceiling(log_k(p))O(log n)(time per histogram) + data movement and merging,,,,,,,,,,MIMD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Vaidyanathan, Hartmann, Varshney",1993,https://ieeexplore.ieee.org/abstract/document/262880,,,,,,,,O(t(n) log m),O(t(n) log m),,O(m t(n)p(n)/log n),,,"n: size of list
+m: size (in bits) of numbers (lower bounded by log(n) and upper bounded by poly of n)
+p(n) and t(n): number of processors  and time needed for deterministic algo to sort n log(n)-bit numbers stably (integer sort) on the specific PRAM submodel",,,,PRAM,,,,,,,,,,,,,,,mp(n)/(log n log m),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Snakesnort: Normal sort - Blackston, Ranade (best for cubes)",1993,https://ieeexplore.ieee.org/abstract/document/4134269,,,,,,,,O(k log k) + k(log N +1),,,O(Nk log k),,,"p=2^n: nodes
+each node holds k keys
+k lower bounded by N^2log N
+=>kN: size of list",,,,sorting network (requires hamiltonian path),,,,,,,,,,,,,,1,N,,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Snakesnort: Gray sort - Blackston, Ranade (best for meshes)",1993,https://ieeexplore.ieee.org/abstract/document/4134269,,,,,,,,O(k log k) + k(2 log N),,,O(Nk log k),,,"N=2^n: nodes
+each node holds k keys
+k lower bounded by Nlog N
+=>kN: size of list",,,,sorting network (requires hamiltonian path),,,,,,,,,,,,,,1,N,,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,O(k log k) +k(2 n^(1/2) + o(n^(1/2))),,,,"Snakesnort: Fast Shearsort - Blackston, Ranade",1993,https://ieeexplore.ieee.org/abstract/document/4134269,,,,,,,,O(k log k) +k(2 n^(1/2) + o(n^(1/2))) w/ high probability,,,,,,"N: nodes
+each node holds k keys
+k lower bounded by N^(1/2)logN
+=>kN: size of list",,,,sorting network (requires hamiltonian path),,,,,,,,,1,,,,,1,N,,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,Comparison sorting,,,,,,,,,,"T&B sort - Tridgell, Brent",1993,https://openresearch-repository.anu.edu.au/handle/1885/40793,,,,,,,,,,,,,yes (experimentally),"n: size of list
+p: number of processors",,,,MIMD,,,,,,,,,,,,,,,p,,,"classified as ""merge based multi-step"" in https://dl.acm.org/doi/pdf/10.1145/181014.192329",,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"generalized bitonic sort - Liszka, Batcher",1993,https://ieeexplore.ieee.org/abstract/document/4134122?casa_token=cM5nTlnQteIAAAAA:kjHWCIc38Nd4SBQs76oK3j-6jsAIXuIM-m_cT3J9kU5wa4Y55SqT--IrK7EOsder37jZYEWC_w,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n log^4(n),,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,O(n log^2(n)),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Chen, Reif",1993,https://ieeexplore.ieee.org/abstract/document/366877,,,,,,,,O(log n) expected,,,,,,"n: size of list
+L: max length of each key (L<=n^O(1))
+H: binary entropy",,,,CRCW PRAM,,,,,,,,,,,,,,1,O(n log (log n/H)/log n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,"Comparison sorting, Non-comparison sorting",,,,,,,,,,"Parallel Sorting by OverPartitioning (PSOP) - Li, Sevcik (Quicksort / PQOP)",1994,https://dl.acm.org/doi/pdf/10.1145/181014.192329,,,,,,,,CQn log n /p+CQpsk log(psk)+CQpk log(pk) +2t_r psk/W +t_r n/(pW),,,,,,"C: constant factor in quicksort
+Q: unit cost in quicksort
+n: size of list
+p: number of processors
+s: oversampling ratio
+k: overpartitioning ratio
+t_r: mean time to access remote memory
+W: number of integers per cache line",,,,,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,"Comparison sorting, Non-comparison sorting",,,,,,,,,,"Parallel Sorting by OverPartitioning (PSOP) - Li, Sevcik (Radix sort / PROP)",1994,https://dl.acm.org/doi/pdf/10.1145/181014.192329,,,,,,,,R_b n/p +R_b ceilling((32-H)/B)n/p+CQ(H-1)2^(H-1)+2t_r ps/W+t_r n/(pW),,,,,,"R_b: unit cost in b-bit radix sort
+n: size of list
+p: number of processors
+H: corresponds to first H bits, smaller than cache size ??
+B: corresponds to the B bits radix sort performs on ??
+C: constant factor in quicksort
+Q: unit cost in quicksort
+t_r: mean time to access remote memory
+s: oversampling ratio
+W: number of integers per cache line",,,,,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Chien, Oruc",1994,https://ieeexplore.ieee.org/abstract/document/285603,,,,,,,,,,,,,,,,,,"""new model"": adaptive sorting network",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Gordillo, Luna",1994,https://ieeexplore.ieee.org/abstract/document/400129,,,,,,,,O(2n-3),O(2n-3),,O(n^2) ?,,,n: size of list,,,,Cellular automata (CA) machine,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Chen, Chen",1994,https://ieeexplore.ieee.org/document/286307/citations#citations,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Gibbons, Matias, Ramachandran",1994,https://dl.acm.org/doi/abs/10.1145/181014.181382,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,,,,,Han and Shen,1995,https://link.springer.com/chapter/10.1007/BFb0030847,,,,,,,,"O(n log log min(m,n)/p + log n)",O(log n),,"O(n min(log log n, log log m/log n))",https://link.springer.com/chapter/10.1007/BFb0030847,yes,"n: size of list
+p: number of processors
+0<=ints<=m-1",,,,CRCW PRAM; arbitrary CRCW PRAM,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Bast, Hagerup",1995,https://www.infona.pl/resource/bwmeta1.element.elsevier-27dbeebf-1d67-3c08-a222-c630ae81af5c,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Das, Sinha",1995,https://ieeexplore.ieee.org/abstract/document/395908,,,,,,,,3n^(1/3) log(n^(1/3))+14n^(1/3)+O(n^(1/3)),3n^(1/3) log(n^(1/3))+14n^(1/3)+O(n^(1/3)),,3n^(4/3) log(n^(1/3))+14n^(4/3)+O(n^(4/3)),,,n: size of list,,,,"Multi-Mesh network, SIMD",,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Andersson, Hagerup, Nilsson, Raman",1995,https://dl.acm.org/doi/pdf/10.1145/225058.225173,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"MM-sort - Zhang, Zheng",1995,https://ieeexplore.ieee.org/abstract/document/530744?casa_token=fWv_XUrk-IsAAAAA:VrU2_Uiu4y99b7ZD6KtQPQ4JDX6-zWPqwFlrtWs8pl3FDAd4YtsmHuOi4MQC9bURA7xhuf9g5g,,,,,,,,O(n/p log p),O(log n),,O(n log p),,,"n: size of list
+p: number of local queues // number of processors equivalent",,,,fixed-size sorting network (inner sorter),,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Louri, Hatch, Na",1995,https://opg.optica.org/ao/fulltext.cfm?uri=ao-34-17-3087&id=45402,,,,,,,,O(1),,,,,,n: size of list,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Jang, Prasanna",1995,https://www.sciencedirect.com/science/article/abs/pii/S0743731585710271,,,,,,,,O(1),O(1),,O(n^2),,,n: size of list,,,,sorting network (reconfigurable mesh),,,,,,,,,,,,,,1,n^2,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Goldberg, Zwick",1995,https://ieeexplore.ieee.org/abstract/document/377028,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison sorting,,,,,,,,,,Goodrich,1996,https://dl.acm.org/doi/pdf/10.1145/237814.237870,,,,,,,,O(n log(n)/p + (L+gn/p)(log(n)/(log(n/p))),O(log n) ?,,O(n log(n) + (Lp+gn)(log(n)/(log(n/p))),,yes ,"n: size of list
+p: number of processors
+g: time “gap” between consecutive messages received by a
+processor in a communication round
+L: worst-case time needed to send one processor-to-processor message (network latency)",,,,"Bulk-Synchronous Parallel (BSP)
+[has section on comp model]",,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Goodrich, Kosaraju (1)",1996,https://dl.acm.org/doi/abs/10.1145/226643.226670,,,,,,,,O(log n),O(log n),,O(n log n),,,n: size of list,,,,CREW Parallel Pointer Machine (PPM),,,,,,,,,,,,,,1,O(n),,,O(n) space complexity,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Goodrich, Kosaraju (2) (modified from CREW to EREW)",1996,https://dl.acm.org/doi/abs/10.1145/226643.226670,,,,,,,,O(log n),O(log n),,O(n log n),,,n: size of list,,,,EREW PPM,,,,,,,,,,,,,,1,O(n),,,O(n) space complexity,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Gerbessiotis, Siniolakis",1996,https://dl.acm.org/doi/pdf/10.1145/237502.237561,,,,,,,,(1+floor(e(1-e)^(-1))(e/2) +o(1))(T_seq/p) computation + O(gT_seq/(p log n)) communication = O(n log n/p) computation + O(g n/p) communication ?,O(log n)  computation + O(g) communication ?,,O(n log n) computation + O(gn) communication,,yes,"n: size of list
+p: number of processors
+0<e<1
+g: ratio of the total throughput of the system
+T_seq: time required by sequential computation",,,,BSP,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Olariu, Schwing",1996,https://www.sciencedirect.com/science/article/abs/pii/S0743731596900155,,,,,,,,O(1),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Jianxian,1996,https://link.springer.com/article/10.1007/BF02900871,,,,,,,,O(n log n/p) + O(n),O(n),,O(n log n),,,"n: size of list
+p: number of processors",,,,sorting network (hypercube),,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"JaJa, Ryu, Vishkin",1996,https://www.sciencedirect.com/science/article/pii/0304397594002630,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Levcopoulus, Petersson",1996,https://www.sciencedirect.com/science/article/pii/0304397595002561,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Shear-sort - De et al.,1997,https://ieeexplore.ieee.org/abstract/document/628397,58,,https://ieeexplore.ieee.org/abstract/document/628397,,,,,O(n^(1/4)),O(n^(1/4)),,,,,,,,,SIMD,,,,,,,,,,,,,,1,sqrt(n) ??,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,,,,,"Albers, Hagerup (1)",1997,https://www.sciencedirect.com/science/article/pii/S0890540197926328,,,,,,,,"O(t)
+t>=log n loglog n",O(log n loglog n),,O(n sqrt(log n loglog n) + n log^2(n)/t),https://www.sciencedirect.com/science/article/pii/S0890540197926328,,"n: size of list
+t>=log n loglog n
+0<=ints<=n",,,,EREW PRAM,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,,,,,"Albers, Hagerup (2)",1997,https://www.sciencedirect.com/science/article/pii/S0890540197926328,,,,,,,,"O(t)
+t>=log n",O(log n),,O(n sqrt(log n) + n log n/2^(t/log n)),https://www.sciencedirect.com/science/article/pii/S0890540197926328,,"n: size of list
+0<=ints<=n
+t>=log n",,,,CREW PRAM,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison (? integer) sorting,,,,,,,,,,"Albers, Hagerup (3)",1997,https://www.sciencedirect.com/science/article/pii/S0890540197926328,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n),https://www.sciencedirect.com/science/article/pii/S0890540197926328,,"n: size of list
+0<=ints<=m",,,,"EREW PRAM
+(nonstandard  word length of O(log n loglog n log m) bits",,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Jang, Kim",1997,https://ieeexplore.ieee.org/abstract/document/651519,,,,,,,,O(4^k),O(4^k),,O(4^k n^(k+1)),,,n^k: size of list,,,,sorting network,,,,,,,,,,,,,,1,n^(k+1),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,randomized,,,,,,,,,,"variation of sample sort - Helman, Bader, JaJa",1998,https://www.sciencedirect.com/science/article/abs/pii/S0743731598914629; https://api.drum.lib.umd.edu/server/api/core/bitstreams/2997ecff-e9a8-4d9f-8b87-b3706834bd51/content,,,,,,,,"O(n/p log(n)) ?
+""with high probability""",O(tau) ? might be a constant?,,O(nlog(n)),,lots of experimental data,"n: size of list
+p: number of processors
+p^2<n/(3ln(n))",,,,,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Helman, Bader, JaJa",1998,https://dl.acm.org/doi/abs/10.1145/297096.297128,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Load Balanced Parallel Radix Sort - Sohn, Kodama",1998,https://dl.acm.org/doi/pdf/10.1145/277830.277903,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Hayashi, Nakano, Olariu",1998,https://ieeexplore.ieee.org/abstract/document/674319,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"ZZ-sort - Zheng, Calidas, Zhang",1999,https://link.springer.com/article/10.1023/A:1008173729055,,,,,,,,O(n/p log p (f(p)+log(n/p)),O(log n f(n)),,O(n log p (f(p)+log(n/p)),,,"n: size of list
+p: number of processors
+n>=p
+f(p): time to sort p elements, one per processor",,,,"""distributed memory parallel computer""",,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Zhang, Zheng",1999,https://downloads.hindawi.com/archive/2000/014617.pdf,,,,,,,,O(n/p log p),O(log n),,O(n log p),,,"n: size of list
+p: number of queues =number of processors",,,,(fixed-size) sorting network,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,Non-comparison sorting,,,,,,,,,,"partitioned parallel radix (PPR) sort - Lee, Jeon, Sohn, Kim",2000,https://link.springer.com/chapter/10.1007/3-540-39999-2_14 (page 176 of pdf),,,,,,,,ceilling(b/g) rounds,,,ceilling(b/g)*p + communication,,,"n: size of list
+p: number of processors
+b: number of bits in integer keys
+g: group of bits used each round",,,,distributed-memory multiprocessors,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Han,2001,https://www.sciencedirect.com/science/article/pii/S0890540101930536,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Gerbessiotis, Siniolakis",2001,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a867d950e57eacf0da9dd17cc80073f124d438ce,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Cerin,2002,https://ieeexplore.ieee.org/abstract/document/1015576,,,,,,,,,,,,,,,,,,"""parallel disk model (PDM)""",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Han, Shen",2002,https://epubs.siam.org/doi/abs/10.1137/S0097539799352449,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Canturk,2002,https://www.proquest.com/docview/2665127548?pq-origsite=gscholar&fromopenview=true,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"load balanced parallel merge sort - Jeon, Kim",2003,https://link.springer.com/article/10.1023/A:1021734202931,,,,,,,,k_1 n/p log p + k_2 (n/p + delta) log p,O(log n),,k_1 n log p + k_2 (n + p delta) log p,,,"n: size of list
+p: number of processors
+k_1: average time to transmit one key
+k_2: average time per key to merge keys
+delta: load imbalance / number of keys over n/p that a processor has to merge",,,,PRAM ?,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Chen, Levcopoulos",2005,https://link.springer.com/chapter/10.1007/3-540-55895-0_452,,,,,,,,O(log n),O(log n),,O(n log n),https://link.springer.com/chapter/10.1007/3-540-55895-0_452,"yes, optimal in respect to Osc","n: size of list
+Osc(x): number of oscillations in sequence x (the list)",,,,arbitrary CRCW PRAM,,,,,,,,,,,,,,1,O(n/log(n) log(Osc(x)/n)),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Cheng, Shah, Gilbert, Edelman",2007,https://sites.cs.ucsb.edu/~gilbert/cs140resources/old/cs140Win2011/slides/ViralParallelSort.pdf,,,,,,,,"O(n log n /p + gn/p +log n max(L,gp^2 log(n))","O(log n max(L,gp^2 log(n)) ?",,"O(n log n + gn +log n max(Lp,gp^3 log(n))",,yes,"n: size of list
+p: number of processors
+L: minimum amount of time between subsequent rounds of communication
+g: measure of bandwidth in time per message size",,,,BSP,,,,,,,,,,,,,,1,p,,,Space complexity: O(p^2 +n/p),,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"partition and concurrent merging (PCM) - Herruzo, Ruiz, Benavides, Plata",2007,https://ieeexplore.ieee.org/abstract/document/4135254,,,,,,,,O(n/p log (n/p)) + O(n),O(n),,O(n log (n/p) +np),,yes,"n: size of list
+p: number of processors",,,,sorting network ?,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Aligned-access sort (AA-sort) - Inoue, Moriyama, Komatsu, Nakatani",2007,https://ieeexplore.ieee.org/abstract/document/4336211,,,,,,,,O(n log n /k),O(log n),,O(n log n),https://ieeexplore.ieee.org/abstract/document/4336211,,"n: size of list
+b: number of blocks (constant)
+k: number of parallel threads (=processors?)
+k<=n/b",,,,SIMD,,,,,,,,,,,,,,1,k,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Damrudi, Aval",2007,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7a87c4f687886a0812dfdacc9660c00780065b02,,,,,,,,O(sqrt(n/4)),O(sqrt(n/4)),,O(n/4 sqrt(n/4)),https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=7a87c4f687886a0812dfdacc9660c00780065b02,,n: size of list,,,,for ILLIAC architecture; processor array; EREW PRAM ?,,,,,,,,,,,,,,1,n/4,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Wei, Xiao, Zhang",2008,https://ieeexplore.ieee.org/abstract/document/4529859,,,,,,,,sqrt(2n) + O(n^(3/4)),sqrt(2n) + O(n^(3/4)),,(sqrt(2n) + O(n^(3/4)))n,,,n: size of list,,,,Biswapped Network (BSN); BSN-mesh,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Hongwei, Yafeng",2008,https://ieeexplore.ieee.org/abstract/document/4736981,,,,,,,,log^2(n) + log n,log^2(n) + log n,,(log^2(n) + log n)^2 n/4 ??,,,n: size of list,,,,sorting network,,,,,,,,,,,,,,1,(log^2(n) + log n)n/4,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Shakeri, Foroughi, Deldari",2008,https://d1wqtxts1xzle7.cloudfront.net/49272337/final236_236-libre.pdf?1475347911=&response-content-disposition=inline%3B+filename%3DParallel_Sorting_On_Linear_Cellular_Auto.pdf&Expires=1690344628&Signature=HS5VfPZkCol0FbjPZguhxQmFz7XCutQ7EvcM1uCqd3eOe9HsWzaMXG4v7MFzavZJVDO31XEF0Ijl1Qg5oY-w9xV3u87-QXqxBn19vS4g4aDcIfszIMKMcONaoY3E-dpzOryfwkrK4rPSRa-0fHfEZjUXYCpzJEjaqCoMNnEj8n5fknRaEkpyWH8iLQ51ypFL2kLqjpvn27eWd0AbX~-aP5MSd41bXXLtE3XogJDUXrVDCDOZ-KFRvMwxgdAznqveBQQIMoNllWgoGYkUcGDWF5uPigtls9O~HoM~6t-OmmiyrOh9Q4qcmhhGBabGKZFlK3~OWQQUXcXbv7csvQAqVw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA,,,,,,,,O(3n/2 -2),O(3n/2 -2),,O(n^2) ?,,,n: size of list,,,,1-D (Linear) cellular automata,,,,,,,,,,,,,,1,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Li, Peng, Chu",2009,https://link.springer.com/chapter/10.1007/978-3-642-03095-6_36 (page 389 of pdf),,,,,,,,O(2^k + m)^2 computational + O(2^k m(2k+1) +k)^2 communication,O(2^k + m)^2 computational + O(2^k m(2k+1) +k)^2 communication,,O(2^k + m)^2 (2^(2^k m +k) + O(2^k m(2k+1) +k)^2,,,"k: dimension of high level nodes (classes)
+m: dimesnsion of low level nodes (clusters)
+number of nodes=size of list=2^(2^k m +k)",,,,sorting network; metacube,,,,,,,,,,,,,,1,2^(2^k m +k),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Dynamic Communication-Efficient parallel Sorting (DCES) - Thanakulwarapas, Werapun",2009,https://ieeexplore.ieee.org/abstract/document/5166986,,,,,,,,O(n/p log (n/p) + n/p log p),O(log n),,O(n log (n/p) + n log p),,,"n: size of list
+p: number of processors",,,,model? to be implemented on a Sympetric Multiprocessor (SMP),,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,"He, Wu, Zheng, Englert",2009,https://ieeexplore.ieee.org/abstract/document/4840337,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,Multi-sort - Rakesh,2010,https://link.springer.com/article/10.1007/s11227-010-0404-4,,,,,,,,O(n^(1/4)),O(n^(1/4)),,O(n^(5/4)),,,n: size of list,,,,"SIMD, multi-mesh of trees (MMT) architecture",,,,,,,,,,,,,,,n ?,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Parallel Sorting by Approximate Selection (PSAS) - Wu, Wu, Shang, Fang",2010,https://ieeexplore.ieee.org/abstract/document/5533008,,,,,,,,O(n + n/p log(n/p)),O(n),,O(np + n log(n/p)),,,"n: size of list
+p: number of processors",,,,PRAM,,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Li, Peng, Chu",2010,https://ieeexplore.ieee.org/abstract/document/5704410?casa_token=A6hsJa3ZVl4AAAAA:DOBWUTA6SbQNXTJyTP4P0DKDgGg4fsoyKlIXpqyFmlAXdaQPKxrP0-VaA1num5Kab4SOpEuoPg,,,,,,,,O((m2^k)^2) computation + O((km2^k)^2) communication,O((m2^k)^2) computation + O((km2^k)^2) communication,,O((m2^k)^2)*2^(2^k m + 2^k -1) computation + O((km2^k)^2) communication,,,"size of list=number of nodes (processors) = 2^(2^k m + 2^k -1)
+m: dimension of base network (m-cube)
+k: number of levels in network",,,,"Sorting Network, Recursive Dual-Net (RDN)",,,,,,,,,,,,,,1,2^(2^k m + 2^k -1),,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Man, Ito, Nakano",2011,https://www.worldscientific.com/doi/abs/10.1142/S0129054111008568,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Goodrich, Sitchinava, Zhang",2011,https://link.springer.com/chapter/10.1007/978-3-642-25591-5_39,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Siebert, Wolf",2011,https://link.springer.com/chapter/10.1007/978-3-642-24449-0_20 (page 184 of pdf),,,,,,,,O(log^2 (n)),O(log^2 (n)),,O(n log^2 (n)),,,n:size of list,,,,model? to be implemented on Message Passing Interface (MPI),,,,,,,,,,,,,,1,n,,,memory complexity = O(1) ?,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Interval Based Rearrangement (IBR) bitonic sort - Peters, Schulz-Hildebrandt, Luttenberger",2012,https://ieeexplore.ieee.org/abstract/document/6267838,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Odeh, Green, Mwassi, Shmueli, Birk",2012,https://ieeexplore.ieee.org/abstract/document/6270834,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Bingmann, Sanders",2013,https://link.springer.com/chapter/10.1007/978-3-642-40450-4_15,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Axtmann, Bingmann, Sanders, Schulz",2015,https://dl.acm.org/doi/abs/10.1145/2755573.2755595,,,,,,,,,,,,,,,,,,generalization of BSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"parallel in-place radix sort (PARADIS) - Cho, Brand, Bordawekar, Finkler, Kulandaisamy, Puri",2015,https://dl.acm.org/doi/abs/10.14778/2824032.2824050,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Blelloch, Fineman, Gibbons, Gu, Shun",2015,https://dl.acm.org/doi/abs/10.1145/2755573.2755604,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"SPMS - Cole, Ramachandran",2017,https://dl.acm.org/doi/abs/10.1145/3040221,,,,,,,,O(log n loglog n),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Siebert, Wolf",2017,https://www.researchgate.net/profile/Christian-Siebert-10/publication/48268999_A_scalable_parallel_sorting_algorithm_using_exact_splitting/links/5a37b64e458515919e70a258/A-scalable-parallel-sorting-algorithm-using-exact-splitting.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Marszalek,2017,https://www.mdpi.com/2073-8994/9/9/176,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Taotiamton, Kittitornkun",2017,https://ieeexplore.ieee.org/abstract/document/8096252,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Axtmann, Witt, Ferizovic, Sanders",2017,https://arxiv.org/abs/1705.02257,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Kokot, Deorowicz, Dlugosz",2017,https://link.springer.com/chapter/10.1007/978-3-319-67792-7_47,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Boxer,2017,https://www.researchgate.net/profile/Laurence-Boxer/publication/321510698_The_Saukas-Song_Selection_Algorithm_and_Coarse_Grained_Parallel_Sorting/links/5a383e0ba6fdccdd41fdebfa/The-Saukas-Song-Selection-Algorithm-and-Coarse-Grained-Parallel-Sorting.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Marszalek, Wozniak, Polap",2018,https://downloads.hindawi.com/journals/complexity/2018/8679579.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Kim, Choi, Bae",2018,https://dl.acm.org/doi/pdf/10.1145/3229710.3229730,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"S-ARRAY - Sharma, Mishra, Mittal",2018,https://books.google.com/books?hl=lv&lr=&id=uMFVDwAAQBAJ&oi=fnd&pg=PA479&dq=%22parallel+sorting%22&ots=cqjzB_wJDz&sig=sbyzoHOHn3hX9ftj944Gf2lVZ30#v=onepage&q=%22parallel%20sorting%22&f=false,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Maurya, Singh",2018,https://j.mecs-press.net/ijmecs/ijmecs-v10-n4/IJMECS-V10-N4-5.pdf,,,,,,,,O(n/p) + O(p log_3(n/p)),O(n) ?,,O(n) + O(p^2 log_3(n/p)),,,"n: size of list
+p: number of processors",,,,shared memory multiprocessor (PRAM or similar?),,,,,,,,,,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Bulk-sort - Ihirri, Errami, Khaldoun",2018,https://link.springer.com/chapter/10.1007/978-981-13-1165-9_66,,,,,,,,,,,O(n),,,,,,,hardware sorter?,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Rattanatranurak,2018,https://www.researchgate.net/profile/Apisit-Rattanatranurak/publication/330240404_Dual_Parallel_Partition_Sorting_Algorithm/links/5c4e6f63458515a4c7457fe8/Dual-Parallel-Partition-Sorting-Algorithm.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Marszalek,2018,https://d1wqtxts1xzle7.cloudfront.net/81170003/jucs_24_04_0488_0514_marszalek-libre.pdf?1645458012=&response-content-disposition=inline%3B+filename%3DParallel_Fast_Sort_Algorithm_for_Secure.pdf&Expires=1690913506&Signature=bfQwJvsHkZOwqfl9-oYjLRynik5cN-MJTIBdPMXjCxvfJ2SxVOTRxmj9PYrGS5~0Kae4hEaN4irvO7SgNQJHVkC~IoNzmVzfPbMXX6pkatNpAK917dSltVUBL2Y4RK700G3Lem-1R7-dlUaZBzYpS28alJ~ABH5NBK9HGr0nXJXnts~q7Z0RFl2F0IHE0YpcB~p6ilk3Mj0OlyPkeRbUiMomzOhIQdr28Mjlhx--wO63JzoB2IJfaahVX8U28f1CjB853qoU~sJPPhVz-g~shrLYNF4~m6J5Wz1rNptQ9qHvshVimRj9x16ZFQuUyJscalORQJkDWr4pYrKQE0sgKA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Non-comparison sorting,,,,,,,,,,"Regions sort - Obeya, Kahssay, Fan, Shun",2019,https://dl.acm.org/doi/abs/10.1145/3323165.3323198,,,,,,,,O((n/K+log K)log r),O((n/K+log K)log r),https://dl.acm.org/doi/abs/10.1145/3323165.3323198,O(n log r),https://dl.acm.org/doi/abs/10.1145/3323165.3323198,,"n: size of list (integers)
+r: range [0...r-1]
+K: algorithm parameter",,,,sorting network ?,,,,,,,,,,,,,,1,n ?,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,,,,,,,,,,,"Histogram Sort with Sampling (HSS) - Harsh, Kale, Solomonik",2019,https://dl.acm.org/doi/abs/10.1145/3323165.3323184?casa_token=OLHora1rGUwAAAAA:z0VGaR4DSjr1kzByhZhURzLjoje2SVXXD7YSGaQ7JiW6zeDLvp1Tis09aCFEuYcsEdJE1kK_xImXgg,,,,,,,,O(k) supersteps,O(1) supersteps ?,,O(kp(log p/epsilon)^(1/k)log n) computational + O(kp(log p/epsilon)^(1/k)) communicstion,https://dl.acm.org/doi/abs/10.1145/3323165.3323184?casa_token=OLHora1rGUwAAAAA:z0VGaR4DSjr1kzByhZhURzLjoje2SVXXD7YSGaQ7JiW6zeDLvp1Tis09aCFEuYcsEdJE1kK_xImXgg,,"n: size of list
+p: number of processors
+k: number of rounds
+epsilon: ? ""epsilon-balanced"", normally O(1) ??",,,,BSP,,,,,,,,,1,,,,,1,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Han, Mishra, Sayed",2019,https://6login.easychair.org/publications/download/77zm,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Marszalek, Capizzi",2019,https://link.springer.com/chapter/10.1007/978-3-030-30275-7_33,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"MultiStack Parallel (MSP) - Kittitornkun, Rattanatranurak",2020,https://journals.riverpublishers.com/index.php/JMM/article/view/3131,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Ellert, Fischer, Sitchinava",2020,https://link.springer.com/chapter/10.1007/978-3-030-57675-2_21,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Goyal,2020,https://www.proquest.com/docview/2418759164?pq-origsite=gscholar&fromopenview=true,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Multi-Deque Sort (MDQSort) - Kittitornkun, Rattanatranurak",2021,https://ieeexplore.ieee.org/abstract/document/9684620,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Zeng,2021,https://ieeexplore.ieee.org/abstract/document/9498124,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Tymoshchuk,2021,https://iopscience.iop.org/article/10.1088/1757-899X/1016/1/012002/meta,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Moghaddam, Moghaddam",2021,https://www.researchsquare.com/article/rs-530919/v1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Large-Block Multi-rate Streaming Sort - van Valenberg,2022,https://pure.tue.nl/ws/portalfiles/portal/292959493/Valenberg_D.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,Carvalho,2022,https://arxiv.org/abs/2208.06902,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Axtmann, Witt, Ferizovic, Sanders",2022,https://dl.acm.org/doi/full/10.1145/3505286,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Han, He",2022,https://www.worldscientific.com/doi/abs/10.1142/S0129054122500071,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Gupta,2022,https://www.mecs-press.org/ijcnis/ijcnis-v14-n1/IJCNIS-V14-N1-6.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,Kunapuli,2022,https://www.proquest.com/docview/2760564135?fromopenview=true&pq-origsite=gscholar&parentSessionId=fzYBUp1qawX4RG%2BojNv7T8nMX1f%2BPbvngyjuJvA6luc%3D,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Alam, Najifi, Taherinejad",2022,https://dl.acm.org/doi/full/10.1145/3517181,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Kent, Pattichis",2022,https://ieeexplore.ieee.org/abstract/document/9837930,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"2mm - Mubarak, Iqbal, Naeem, Hussain",2022,https://www.sciencedirect.com/science/article/abs/pii/S0304397522000512,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Lenjani, Ahmed, Skadron",2022,https://ieeexplore.ieee.org/abstract/document/9896944,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Ganapathi, Chowdhury",2022,https://academic.oup.com/comjnl/article/65/10/2709/6334046,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Zulian, Bader, Fourestey, Krause, Rossinelli",2022,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4142065,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,1,Comparison sorting,,,,,,,,,,"Goodrich, Jacob",2023,https://dl.acm.org/doi/abs/10.1145/3558481.3591093,,,,,,,,O(log n) w/ high probability,O(log n) w/ high probability,https://dl.acm.org/doi/abs/10.1145/3558481.3591093,O(nlog n) w/ high probability,https://dl.acm.org/doi/abs/10.1145/3558481.3591093,,n: size of list,,,,CREW PRAM,,,,,,,,,1,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Multi-Deque Partition DualDeque Merge Sorting algorithm (MPDMSort) - Ketchaya, Rattanatranurak",2023,https://www.nature.com/articles/s41598-023-33583-4,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://www.emerald.com/insight/content/doi/10.1108/ACI-10-2021-0288/full/html,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0,,,,,,,,,,,"Du, Zhang, Bader",2023,https://link.springer.com/chapter/10.1007/978-3-031-30442-2_6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,Sorting,0.001,,,,,,,,,,,"Kuiper, Muhleisen",2023,https://hannes.muehleisen.org/publications/ICDE2023-sorting.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3,Matrix Chain Multiplication,1,Approximate MCOP,35,,,1,0,O(\log n),,,[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf Czumaj (1996)],Czumaj,1996,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf,,,,0,0,2,n: 2,$O(\log n)$,$O(log n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf,$O(n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf,yes (page 2),n: number of matrices in chain,n,,,CREW PRAM,words?,3,n: 3,$O(n)$,"Derived: solving the optimal triangulation problem of a convex polygon where there are $n+1$ vertices and $n+1$, so total $O(n)$ auxiliary space",1,0,,0,n/a,1,1.1547,0,1,$n / \log n$,0,0,,"Matrix chain multiplication (or Matrix Chain Ordering Problem; MCOP) is an
+ optimization problem that can be solved using dynamic programming.
+ Given a sequence of matrices; the goal is to find the most efficient
+ way to multiply these matrices.",,,,,,,,,,,9.965,Inf,,,,,,,,1,,,Combinatorics
+3,Matrix Chain Multiplication,1,Approximate MCOP,35.1,,,1,0,O(\log \log n),,,[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf Czumaj (1996)],Czumaj,1996,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf,,,,0,0,1.99,n: 1.99,$O(\log \log n)$,$O(log log n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf,$O(n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.218.8168&rep=rep1&type=pdf,yes (page 2),n: number of matrices in chain,n,,,COMMON CRCW PRAM,words?,3,n: 3,$O(n)$,"Derived: solving the optimal triangulation problem of a convex polygon where there are $n+1$ vertices and $n+1$, so total $O(n)$ auxiliary space",1,0,,0,n/a,1,1.1547,0,1,$n / \log \log n$,0,0,,"Matrix chain multiplication (or Matrix Chain Ordering Problem; MCOP) is an
+ optimization problem that can be solved using dynamic programming.
+ Given a sequence of matrices; the goal is to find the most efficient
+ way to multiply these matrices.",,,,,,,,,,,9.965,Inf,,,,,,,,1,,,Combinatorics
+3,Matrix Chain Multiplication,0.001,Approximate MCSP,32,,,1,1,O(n^2),,,[http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.56.222&rep=rep1&type=pdf Heejo Lee; Jong Kim; Sungje Hong; and Sunggu Lee (1997)],Heejo Lee; Jong Kim; Sungje Hong; and Sunggu Lee,1997,http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.56.222&rep=rep1&type=pdf,,,,0,0,5,n: 5,$O(n^2+nP)$,,,,,,"$P$: number of processors
+$n$: number of matrices",n,,,"""parallel system""",words,5,n: 5,$O(n^2)$?,Derived: two $n \times n$ size tables ($S$ and $W$),1,0,,0,,1,"""near optimal""",0,1,$P$,0,0,,"Matrix chain multiplication (or Matrix Chain Ordering Problem; MCOP) is an
+ optimization problem that can be solved using dynamic programming.
+ Given a sequence of matrices; the goal is to find the most efficient
+ way to multiply these matrices.",,,,,,,,,,,1000000,Inf,,,,,,,,1,,,Combinatorics
+3,Matrix Chain Multiplication,1,Approximate MCOP,33,,,1,1,O(log^4 n),,,[https://epubs.siam.org/doi/abs/10.1137/0225039 Prakesh Ramanan (1996)],Prakesh Ramanan,1996,https://epubs.siam.org/doi/abs/10.1137/0225039,,,,0,0,2.03,n: 2.03,$O(\log^4 n)$,$O(\log^4 n)$,https://epubs.siam.org/doi/abs/10.1137/0225039,$O(n\log^4 n)$?,https://epubs.siam.org/doi/abs/10.1137/0225039,no,$n$: number of matrices,n,,,CREW PRAM,words,3,n: 3,$O(n)$?,Derived: $n$ subtrees and each one has a $O(1)$ size trunk,1,0,,0,,0,,0,1,$n$,0,0,,"Matrix chain multiplication (or Matrix Chain Ordering Problem; MCOP) is an
+ optimization problem that can be solved using dynamic programming.
+ Given a sequence of matrices; the goal is to find the most efficient
+ way to multiply these matrices.",,,,,,,,,,,99,Inf,,,,,,,,1,,,Combinatorics
+3,Matrix Chain Multiplication,1,Matrix Chain Scheduling Problem,34,,,1,1,O (log^3 n),,,[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.9426&rep=rep1&type=pdf Czumaj (1993)],Czumaj,1993,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.9426&rep=rep1&type=pdf,,,,0,0,2.02,n: 2.02,O(log^3 n),$O(log^3 n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.9426&rep=rep1&type=pdf,$O(n^2)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.9426&rep=rep1&type=pdf,no?,$n$: number of matrices,n,,,CREW PRAM,words,5,n: 5,$O(n^2)$?,Derived: uses two arrays ($D$ and $c$) both of size $O(n^2)$,1,0,,0,,0,,0,1,$O(n^2 / \log^3 n)$,0,0,,"Matrix chain multiplication (or Matrix Chain Ordering Problem; MCOP) is an
+ optimization problem that can be solved using dynamic programming.
+ Given a sequence of matrices; the goal is to find the most efficient
+ way to multiply these matrices.",,,,,,,,,,,989,Inf,,,,,,,,1,,,Combinatorics
+4,Least Common Subsequence,1,LCS,,,,,,,,,[https://ieeexplore.ieee.org/document/298210 Lu & Lin (1994)],Lu & Lin,1994,https://ieeexplore.ieee.org/document/298210,,,,,,,,O(log^2 m + log n),O(log^2 m + log n),https://ieeexplore.ieee.org/document/298210,O(mn (log m + log n/log m)),https://ieeexplore.ieee.org/document/298210,no?,"m: length of shorter string
+n: length of longer string",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O(mn/log m),0,0,,The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences).,,,,,,,,,,,,,,,,,,,,,,,
+4,Least Common Subsequence,1,LCS,,,,,,,,,[https://ieeexplore.ieee.org/document/298210 Lu & Lin (1994)],Lu & Lin,1994,https://ieeexplore.ieee.org/document/298210,,,,,,,,"O(log^2 m log log m) if 
+log^2 m log log m > log n else
+O(log n)","O(log^2 m log log m) 
+if log^2 m log log m 
+> log n else O(log n)",https://ieeexplore.ieee.org/document/298210,O(mn),https://ieeexplore.ieee.org/document/298210,no?,"m: length of shorter string
+n: length of longer string",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,"O(mn/(log^2 m 
+log log m)) if
+log^2 m log log m
+< log n else
+O(mn/log n)",0,0,,The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences).,,,,,,,,,,,,,,,,,,,,,,,
+4,Least Common Subsequence,1,LCS,,,,,,,,,[https://ieeexplore.ieee.org/document/21966 Aggarwal & Park (1988)],Aggarwal & Park,1988,https://ieeexplore.ieee.org/document/21966,,,,,,,,O(log m log n),O(log m log n),https://ieeexplore.ieee.org/document/21966,O(mn log n),https://ieeexplore.ieee.org/document/21966,no?,"m: length of shorter string
+n: length of longer string",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O(mn/log m),0,0,,The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences).,,,,,,,,,,,,,,,,,,,,,,,
+4,Least Common Subsequence,1,LCS,,,,,,,,,[https://www.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313 Apostolico (1990)],Apostolico,1990,https://www.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,,,,,,,,O(log m log n),O(log m log n),https://www.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,O(mn log n),https://www.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,no?,"m: length of shorter string
+n: length of longer string",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O(mn/log m),0,0,,The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences).,,,,,,,,,,,,,,,,,,,,,,,
+4,Least Common Subsequence,1,LCS,,,,,,,,,[https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1 Mathies (1988)],Mathies,1988,https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1,,,,,,,,O(log m log n),O(log m log n),https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1,O(mn log m log n),https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1,no?,"m: length of shorter string
+n: length of longer string",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(mn),0,0,,The longest common subsequence (LCS) problem is the problem of finding the longest subsequence common to all sequences in a set of sequences (often just two sequences).,,,,,,,,,,,,,,,,,,,,,,,
+5,Maximum Flow,1,,,,,1,1,O(V^3*log(V)/p),(see max flow in sheet1),,[http://users.umiacs.umd.edu/~vishkin/TEACHING/4CLASS/SV82-maxflow.pdf Shiloach (1981)],Shiloach,1981,http://users.umiacs.umd.edu/~vishkin/TEACHING/4CLASS/SV82-maxflow.pdf,,,,,0,,,O(V^3*log(V)/p),$O(V^3*log(V)/p)$,http://users.umiacs.umd.edu/~vishkin/TEACHING/4CLASS/SV82-maxflow.pdf,$O(V^3*log(V))$,http://users.umiacs.umd.edu/~vishkin/TEACHING/4CLASS/SV82-maxflow.pdf,yes relative to sequential algorithm described in paper,"V: number of vertices
+E: number of edges
+U: maximum edge capacity
+p: number of processors",,,,Parallel RAM (unclear what type; seems like any could work?),words,O(E),"V: 5,
+E: 3",can be derived?,,,,,0,,0,,0,1,p,0,0,,maximum flow problems involve finding a feasible flow through a flow network that is maximum.,,,,,,,,,,,,,,,,,,,,2,,,Combinatorics
+5,Maximum Flow,1,Integer Maximum Flow,,,,1,1,O(V^1.66 log(V) log(U)),(see max flow in sheet1),,[https://dl.acm.org/citation.cfm?id=290181 Goldberg & Rao (Parallel) (1997)],Goldberg & Rao (Parallel),1997,https://dl.acm.org/citation.cfm?id=290181,,,,,0,4.66,,O(V^1.66 log(V) log(U)),$O(V^1.66 log(V) log(U))$,https://dl.acm.org/citation.cfm?id=290181,$O(V^2.66 log(V) log(U))$?,Derived,,"V: number of vertices
+E: number of edges
+U: maximum edge capacity",,,,PRAM,words,O(V^2),V: 5,https://dl.acm.org/citation.cfm?id=290181,,,,,0,,0,,0,1,O(V),0,0,,maximum flow problems involve finding a feasible flow through a flow network that is maximum.,,,,,,,,,,,,,,,,,,,,2,,,Combinatorics
+5,Maximum Flow,1,Integer Maximum Flow,,,,1,1,O(E^0.5 V log(V) log(U)),(see max flow in sheet1),,[https://dl.acm.org/citation.cfm?id=290181 Goldberg & Rao (Parallel) (1997)],Goldberg & Rao (Parallel),1997,https://dl.acm.org/citation.cfm?id=290181,,,,,0,5,,O(E^0.5 V log(V) log(U)),$O(E^0.5 V log(V) log(U))$,https://dl.acm.org/citation.cfm?id=290181,$O(E^0.5 V^2 log(V) log(U))$?,Derived,,"V: number of vertices
+E: number of edges
+U: maximum edge capacity",,,,PRAM,words,O(V^2),V: 5,https://dl.acm.org/citation.cfm?id=290181,,,,,0,,0,,0,1,O(V),0,0,,maximum flow problems involve finding a feasible flow through a flow network that is maximum.,,,,,,,,,,,,,,,,,,,,2,,,Combinatorics
+6,Matrix Product,0,,,Strassen,,,,,,,,Chandra,1976,https://cir.nii.ac.jp/crid/1573105974323147776,,,,,,,,O(n^{log 7}/p),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,Boolean Matrix Multiplication,,,,,,,,,,"Agerwala, Lint",1978,"T. Agerwala and B. Lint, ""Communication in parallel algorithms for Boolean matrix multiplication,""-Proc. 1978 Inter. Conf. on Parallel Processing, 1978.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,sparse matrix multiplication,,,,,,,,,,Gustavson,1978,https://dl.acm.org/doi/pdf/10.1145/355791.355796,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(log n),O(log n),,O(n^3*log n),,,,,,,SIMD-CC,,,,,,,,,0,,0,,0,1,n^3,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(n),O(n),,O(n^3),,,,,,,SIMD-CC,,,,,,,,,0,,0,,0,1,n^2,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(n/m + log m),O(n/m + log m),,O(n^3 + n^2*m*log m),,,"nxn matrix multiplication
+1 <= m <= n",,,,SIMD-CC,,,,,,,,,0,,0,,0,1,n^2*m,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(n^2/m-n^2.61/m^1.61),O(n^2/m-n^2.61/m^1.61),,O(n^2*m-n^2.61*m^0.39),,,,,,,SIMD-CC,,,,,,,,,0,,0,,0,1,m^2,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(log n),O(log n),,O(n^3*log n),,,,,,,SIMD-PS,,,,,,,,,0,,0,,0,1,n^3,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(n/m + log n),O(n/m + log n),,O(n^3 + n^2*m*log m),,,,,,,SIMD-PS,,,,,,,,,0,,0,,0,1,n^2*m,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(n^2/m-n^2.61/m^1.61),O(n^2/m-n^2.61/m^1.61),,O(n^2*m-n^2.61*m^0.39),,,,,,,SIMD-PS,,,,,,,,,0,,0,,0,1,m^2,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,"O(1)
+Work: O(n^3)","""Edge lengths are independent identically distributed nonnegative random variables. Each edge length has a distribution function F with F(0)=0 and that F is differentiable at zero.""",,,Frieze & Rudolph,1984,http://math.cmu.edu/~af1p/Texfiles/PARALLELALG.pdf,,,,,,,,,,,,,,,,,,CRCW PRAM,,,,,,,,,,,,,,1,n^3,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,1,,,,,,,,,,,"AGGARWAL, CHANDRA, SNIR",1990,https://www.sciencedirect.com/science/article/pii/030439759090188N,,,,,,,,O(log^{3/2}(n)),O(n^3/p + n^2/p^{2/3})),,O(n^3+n^2*p^{1/3}) = O(n^3),,,,,,,LPRAM,,,,,,,,,0,,0,,0,1,p=O(n^3/log^{3/2}(n)),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Agarwal, Gustavson, Zubair",1994,https://ieeexplore.ieee.org/abstract/document/5389494,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Agarwal, Bale, Gustavson, Joshi, Palkar",1995,https://people.cs.vt.edu/~asandu/Public/Qual2005/Q2005_agarwal.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Irony, Toledo, Tiskin",2004,http://www.cs.tau.ac.il/~stoledo/Bib/Pubs/lb-jpdc.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Krotkiewski, Dabrowski",2010,https://www.sciencedirect.com/science/article/pii/S0167819110000268?casa_token=eAx_-mjANU4AAAAA:slujIzb4XHfaZEknKNYf0-xVIZaimIbspCfL93hMdcq4W9LHVS76VN15_xmNdKz4oTxbTXwXvvw,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Solomonik, Demmel",2011,https://www2.eecs.berkeley.edu/Pubs/TechRpts/2011/EECS-2011-10.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Ballard, Demmel, Holtz, Lipshitz, Schwartz",2012,https://dl.acm.org/doi/pdf/10.1145/2312005.2312044,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,Ballard,2013,https://www.proquest.com/docview/1526399338?pq-origsite=gscholar&fromopenview=true,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Bae, Shinn, Takaoka",2014,https://www.sciencedirect.com/science/article/pii/S1877050914003858,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Milaković, Selvitopi, Nisa, Budimlić, Buluc",2023,https://dl.acm.org/doi/abs/10.1145/3545008.3545048,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+6,Matrix Product,0,,,,,,,,,,,"Muraoka, Kuck",1973,https://dl.acm.org/doi/pdf/10.1145/361932.361938,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+10,Linear Programming,1,General Linear Programming,,,,,,,,,[https://epubs.siam.org/doi/pdf/10.1137/S0097539792234858 Ajtai & Megiddo (1996)],Ajtai & Megiddo,1996,https://epubs.siam.org/doi/pdf/10.1137/S0097539792234858,,,,,,,,O((log log n)^d),O((log log n)^d),https://epubs.siam.org/doi/pdf/10.1137/S0097539792234858,O(n(log log n)^d),Derived,no,"n: number of constraints
+d: number of dimensions",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,Linear programming (LP; also called linear optimization) is a method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships. Linear programming is a special case of mathematical programming (also known as mathematical optimization).,,,,,,,,,,,,,,,,,,,,,,,
+10,Linear Programming,1,General Linear Programming,,,,,,,,,[https://dl.acm.org/doi/pdf/10.1145/167088.167211 Dyer (1993)],Dyer,1993,https://dl.acm.org/doi/pdf/10.1145/167088.167211,,,,,,,,O(log n(log log n)^(d-1)),O(log n(log log n)^(d-1)),https://dl.acm.org/doi/pdf/10.1145/167088.167211,O(nlog n(log log n)^(d-1)),Derived,no,"n: number of constraints
+d: number of dimensions",,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,Linear programming (LP; also called linear optimization) is a method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships. Linear programming is a special case of mathematical programming (also known as mathematical optimization).,,,,,,,,,,,,,,,,,,,,,,,
+10,Linear Programming,1,"General Linear Programming 
+",,,,,,,,,[https://ieeexplore.ieee.org/document/89578 Alon & Megiddo (1990)],Alon & Megiddo,1990,https://ieeexplore.ieee.org/document/89578,,,,,,,,O(d^2 log^2 d) with probability approaching 1,O(d^2 log^2 d) with probability approaching 1,https://ieeexplore.ieee.org/document/89578,O(d^3 n),https://ieeexplore.ieee.org/document/89578,yes,"n: number of constraints
+d: number of dimensions",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(nd/log^2 d),0,0,,Linear programming (LP; also called linear optimization) is a method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships. Linear programming is a special case of mathematical programming (also known as mathematical optimization).,,,,,,,,,,,,,,,,,,,,,,,
+10,Linear Programming,1,"General Linear Programming 
+(only 2 -dimensional)",,,,,,,,,[https://www.sciencedirect.com/science/article/pii/002001909090026T?ref=pdf_download&fr=RR-2&rr=7d29f5c94c8e2249 Deng (1990)],Deng,1990,https://www.sciencedirect.com/science/article/pii/002001909090026T?ref=pdf_download&fr=RR-2&rr=7d29f5c94c8e2249,,,,,,,,O(log n),O(log n),https://www.sciencedirect.com/science/article/pii/002001909090026T?ref=pdf_download&fr=RR-2&rr=7d29f5c94c8e2249,O(n),https://www.sciencedirect.com/science/article/pii/002001909090026T?ref=pdf_download&fr=RR-2&rr=7d29f5c94c8e2249,yes,n: number of constraints,,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(n/log n),0,0,,Linear programming (LP; also called linear optimization) is a method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships. Linear programming is a special case of mathematical programming (also known as mathematical optimization).,,,,,,,,,,,,,,,,,,,,,,,
+11,Line segment intersection,1,"Reporting all intersection points, line segments",126,,,1,1,O(log^2(n)),,,[https://dl.acm.org/citation.cfm?id=72950 Goodrich (1989)],Goodrich,1989,https://dl.acm.org/citation.cfm?id=72950,,,,0,0,2,n: 2,$O(\log^2(n))$,$O(\log^2(n))$,https://dl.acm.org/citation.cfm?id=72950,$O(n\log^2(n) + k\log(n))$,https://dl.acm.org/citation.cfm?id=72950,yes (but algo is not optimal),"n: number of line segments
+k: number of points of intersection",n,,,CREW PRAM,words,3,"n: 3,
+k: 3",O(n+k) total?,"Seems to require creating/storing an O(n)-sized data structure (""segment tree""), and then computing the O(k) intersections using the data structure",1,0,,0,,0,,0,1,O(n + k/log n),0,0,,"The line segment intersection problem supplies a list of line segments in the Euclidean plane and asks about the points where they intersect (cross), if any.",,,,,,,,,,,99.3,10070.49345,,,,,,,,4,,,Image Processing
+12,Convex Hull,1,2-dimensional,136,,,1,1,"O(logn) time using
+O(n) processors",,,[https://cse.buffalo.edu/faculty/miller/Papers/IEEETC88a.pdf Miller; Stout (1988)],Miller; Stout,1988,https://cse.buffalo.edu/faculty/miller/Papers/IEEETC88a.pdf,,,,1,5->7,#VALUE!,,"$O(logn)$ time using
+$O(n)$ processors",$O(\log n)$,https://cse.buffalo.edu/faculty/miller/Papers/IEEETC88a.pdf,$O(n \log n)$,https://cse.buffalo.edu/faculty/miller/Papers/IEEETC88a.pdf,"yes, implicitly (can't do better than sorting)","n: number of line segments
+h: number of points on the convex hull",n,,,"EREW PRAM, possibly others (see paper)",words,3,n: 3,O(n) total?,Divide and conquer can be done in linear space total as space can be reused after conquer steps,1,0,,0,,0,,0,1,O(n),0,0,,"the convex hull or convex envelope or convex closure of a set X of points
+ in the Euclidean plane or in a Euclidean space
+ (or; more generally; in an affine space over the reals) is the smallest 
+convex set that contains X. ",,,,h = n^0.5,,,,,,,9.965,100351229.3,,,,,,,,3,,,Image Processing
+13,Strongly Connected Components,1,SCCs,140,,,1,1,O(ElogV+V),,,[https://ldhulipala.github.io/readings/sequential-scc.pdf Fleischer forward-backward (FB) algorithm (2003)],Fleischer forward-backward (FB) algorithm,2003,https://ldhulipala.github.io/readings/sequential-scc.pdf,,,,0,0,5.01,"E: 3,
+V: 5.01",$O(E\log V+V)$,$O(E\log V+V)$?,http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,$O(E\log V+V)$? (sequentially),http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,no,"V: number of vertices
+E: number of edges",V,,,Word RAM,words,3,"V: 3,
+E: 3",O(V+E),constructing recursive subgraphs? and reuse space across recursive calls,1,0,,0,,0,,0,1,$O(n)$,0,0,,"The strongly connected components or diconnected components of an arbitrary
+ directed graph form a partition into subgraphs that are themselves
+ strongly connected.",,,,"V:E
+3:4",,,,,,,428571,0.002333335667,,,,,,,,4,,,Combinatorics
+13,Strongly Connected Components,0.001,SCCs,144,,,1,1,O(V^2),,,[http://www.cs.ox.ac.uk/people/gavin.lowe/parallelDFS.html Lowe’s Algorithm (2014)],Lowe’s Algorithm,2014,http://www.cs.ox.ac.uk/people/gavin.lowe/parallelDFS.html,,,,0,0,5,"V: 5,
+E: 3",$O(V^2)$,"$O(V^2)$? (""cost of transferring from one search to another"")",http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,$O(V^2)$,http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,no,"V: number of vertices
+E: number of edges
+p: number of processors",V,,,Word RAM,words,3,"V: 3,
+E: 1",O(V) per processor,(can be easily derived?),1,0,,0,,0,,0,1,,0,0,http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,"The strongly connected components or diconnected components of an arbitrary
+ directed graph form a partition into subgraphs that are themselves
+ strongly connected.",,,,"V:E
+3:4",,,,,,,184244,0.005427585159,,,,,,,,4,,,Combinatorics
+13,Strongly Connected Components,1,SCCs,145,,,1,1,"O(p*(V+E)*alpha(V, E))?",,,[https://link.springer.com/chapter/10.1007/978-3-642-45221-5_44 Renault’s Algorithm (2009)],Renault’s Algorithm,2009,https://link.springer.com/chapter/10.1007/978-3-642-45221-5_44,,,,0,0,5,"V: 5,
+E: 3,
+p: 3","$O(p*(V+E)*\alpha(V, E))$","$O((V+E)*\alpha(V, E))$",http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,"$O(p*(V+E)*\alpha(V, E))$",http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,no,"V: number of vertices
+E: number of edges
+p: number of processors",V,,,Word RAM,words,3,"V: 3,
+E: 1",O(V) per processor,(can be easily derived?),1,0,,0,,0,,0,1,$p$,0,0,http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,"The strongly connected components or diconnected components of an arbitrary
+ directed graph form a partition into subgraphs that are themselves
+ strongly connected.",,,,"V:E
+3:4",,,,,,,183673,0.005444458358,,,,,,,,4,,,Combinatorics
+13,Strongly Connected Components,1,SCCs,148,,,1,1,O(V(V+E)),,,[https://ieeexplore.ieee.org/document/8133154 OBF Algorithm (2011)],OBF Algorithm,2011,https://ieeexplore.ieee.org/document/8133154,,,,0,0,6,"E: 3,
+V: 6",$O(V(V+E))$,$O(E\log V+V)$? (see FB algorithm),http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,$O(E\log V+V)$? (sequentially),http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,no,"V: number of vertices
+E: number of edges
+p: number of processors",V,,,Word RAM,words,5,"V: 5,
+E: 3",O(E+V^2) total,https://ris.utwente.nl/ws/files/6872352/Barnat09distributed.pdf,0,1,,0,,0,,0,1,$O(n)$,0,0,,"The strongly connected components or diconnected components of an arbitrary
+ directed graph form a partition into subgraphs that are themselves
+ strongly connected.",,,,"V:E
+3:4",,,,,,,428571,0.002333335667,,,,,,,,4,,,Combinatorics
+13,Strongly Connected Components,1,SCCs,149,,,1,1,O(VE),,,[https://research.vu.nl/en/publications/on-distributed-verification-and-verified-distribution CH Algorithm (2004)],CH Algorithm,2004,https://research.vu.nl/en/publications/on-distributed-verification-and-verified-distribution,,,,0,0,6,"E: 3,
+V: 6",$O(VE)$,$O(E)$??,http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf (for work),$O(VE)$,http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf (for work),no,"V: number of vertices
+E: number of edges
+p: number of processors",V,,,Word RAM,words,3,"V: 3,
+E: 3",O(V+E)?,Each vertex needs to keep track of one color; then we need to build recursive subgraphs,1,0,,0,,0,,0,1,$O(n)$,0,0,,"The strongly connected components or diconnected components of an arbitrary
+ directed graph form a partition into subgraphs that are themselves
+ strongly connected.",,,,"V:E
+3:4",,,,,,,244897,0.004083349326,,,,,,,,4,,,Combinatorics
+13,Strongly Connected Components,1,SCCs,150,,,1,1,O(V(V+E)),,,[https://stanford-ppl.github.io/website/papers/sc13-hong.pdf Hong’s algorithm (2013)],Hong’s algorithm,2013,https://stanford-ppl.github.io/website/papers/sc13-hong.pdf,,,,0,0,6,"E: 3,
+V: 6",$O(V(V+E))$,$O(E\log V+V)$? (see FB algorithm),http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,$O(E\log V+V)$? (sequentially),http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,no,"V: number of vertices
+E: number of edges
+p: number of processors",V,,,Word RAM,words,3,"V: 3,
+E: 3",O(V+E)?,Building recursive subgraphs,1,0,,0,,0,,0,1,$O(n)$,0,0,,"The strongly connected components or diconnected components of an arbitrary
+ directed graph form a partition into subgraphs that are themselves
+ strongly connected.",,,,"V:E
+3:4",,,,,,,428571,0.002333335667,,,,,,,,4,,,Combinatorics
+13,Strongly Connected Components,0.001,SCCs,,,,1,1,O(V+E),,,[https://www.semanticscholar.org/paper/Depth-First-Search-and-Linear-Graph-Algorithms-Tarjan/385742fffcf113656f0d3cf6c06ef95cb8439dc6 Geldenhuys-Valmari (2004)],Geldenhuys-Valmari,2004,https://www.semanticscholar.org/paper/Depth-First-Search-and-Linear-Graph-Algorithms-Tarjan/385742fffcf113656f0d3cf6c06ef95cb8439dc6,,,,,,,,O(V+E),,,,,,"V: number of vertices
+E: number of edges",,,,Word RAM,words,O(V)?,V: 3,(follow-up from Tarjan's algorithm),,,,,0,,0,,0,1,,0,0,,"The strongly connected components or diconnected components of an arbitrary
+ directed graph form a partition into subgraphs that are themselves
+ strongly connected.",,,,,,,,,,,,,,,,,,,,,,,Combinatorics
+13,Strongly Connected Components,1,SCCs,,BFS method,,,,,,,,Reghbati (Arjomandi) and Corneil,1978,https://epubs.siam.org/doi/abs/10.1137/0207020,,,,,,,,T/p+L log(p)+2n,O(n),,O(n+m) ?,,"yes - compares to sequential BFS search algorithm; ""superior to sequential algorithm for h-dense graphs where h>=ceiling(log k)+7 (h-dense: #edges>=h*n/2)""","n: number of vertices
+m: number of edges
+p: number of processors
+d: diameter of graph
+L: distance of node farhest from start node
+T: complexity of optimal sequantial BFS algo",,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,p,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,SCCs; Transitive Closure,,Transitive closure method,,,,,,,,Reghbati (Arjomandi) and Corneil,1978,https://epubs.siam.org/doi/abs/10.1137/0207020,,,,,,,,O(log^2(n)),O(log^2(n)),,,,,n: number of vertices,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n^3,,,"promised to have ""proof of correctness and details of timing"": https://dl.acm.org/doi/book/10.5555/908319; originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515",,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,Transitive closure method,,,,,,,,Chandra,1976,https://cir.nii.ac.jp/crid/1573105974323147776,,,,,,,,O(log^2(n)),,,,,,,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n^(log7)/log(n),,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,Transitive Closure,,Vertex collapse method,,,,,,,,Hirschberg,1976,https://dl.acm.org/doi/abs/10.1145/800113.803631,,,,,,,,O(log^2(n)),O(log^2(n)) ?,,O(n^3 log^2(n)) ?,,,,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n^3,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,SCCs,,Vertex collapse method,,,,,,,,Hirschberg,1976,https://dl.acm.org/doi/abs/10.1145/800113.803631,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^2 log^2(n)) ?,,,n: number of vertices,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n^2,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,SCCs; Transitive Closure,,Vertex collapse method,,,,,,,,Hirschberg et al.,1979,https://dl.acm.org/doi/abs/10.1145/359138.359141,,,,,,,,O(log^2(n)),O(log^2(n)),https://dl.acm.org/doi/abs/10.1145/359138.359141,O(n^2 log^2(n)) ,,,n: number of vertices,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n ceilling(n/log(n)),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected,,Vertex collapse method,,,,,,,,Wyllie,1979,https://hdl.handle.net/1813/7502,,,,,,,,O(log^2(n)),O(log^2(n)),,O(log^2(n)*(n+m)),,,"n: number of nodes
+m: number of edges",,,,MIMD-TC-R,,,,,,,,,0,,0,,0,1,n+m,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected,,Vertex collapse method,,,,,,,,Nassimi and Sahni,1980,https://epubs.siam.org/doi/abs/10.1137/0209058,,,,,,,,O(n^0.5 log(n)),O(n^0.5 log(n)),,O(n^1.5 log(n)),,,n: number of vertices,,,,SIMD-SM-R (mesh-connected parallel computer),,,,,,,,,0,,0,,0,1,n,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,SCCs; Transitive Closure,,,,,,,,,,Chin et al.,1982,https://dl.acm.org/doi/pdf/10.1145/358628.358650,,,,,,,,O(log^2(n)),O(log^2(n)),,,,,,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n ceilling(n/log^2(n)),,,"originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515
+refrenced this https://hub.hku.hk/handle/10722/151778 ? don't have access to it but same authors, maybe same content?",,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,dense undirected graph (with small diameter),,Vertex collapse method,,,,,,,,Savage and Ja'Ja',1981,https://epubs.siam.org/doi/abs/10.1137/0210051,,,,,,,,O(log(n)log(d)),O(log(n)log(d)),,O(n^3*log(d)),,,"n: number of nodes
+d: diameter of the the graph",,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,0,,0,,0,1,O(n^3/log(n)),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected graph - sparse,,Vertex collapse method,,,,,,,,Savage and Ja'Ja',1981,https://epubs.siam.org/doi/abs/10.1137/0210051,,,,,,,,O(log^2(n)),O(log^2(n)),,O((m+n log(n))*log^2(n)),,,"n: number of nodes
+m: number of edges",,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,0,,0,,0,1,O(m+n log(n)),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,Vertex collapse method,,,,,,,,Savage,1981,https://link.springer.com/chapter/10.1007/978-3-642-68402-9_32,,,,,,,,O(n+m),O(n+m),,O(n(n+m)),,,"n: number of nodes
+m: number of edges",,,,Systolic array,,,,,,,,,0,,0,,0,1,n+1,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected graph,,Vertex collapse method,,,,,,,,Nath and Maheshwari,1982,https://www.sciencedirect.com/science/article/pii/0020019082901314,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^2*log(n)),,,n: number of nodes,,,,SIMD-SM (EREW PRAM?),,,,,,,,,0,,0,,0,1,n^2/log n,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,Vertex collapse method,,,,,,,,Shiloach and Vishkin,1982,"SHILOACH, Y., AND VISHKIN, U. 1982a. An O(log n) parallel connectivity algorithm. J Algorithms 3, 1 (Mar.), 57-67.",,,,,,,,O(log(n)),,,,,,,,,,SIMD-SM-RW (probabalistic) (CRCW PRAM?),,,,,,,,,,,,,,1,n+2m,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected,,,,,,,,,,Vishkin,1982,https://www.sciencedirect.com/science/article/pii/0166218X84900192,,,,,,,,O(n^2/p),O(n^2/p),,O(n^2),,,,,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,p (<=n^2/log^2 n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,Transitive closure method,,,,,,,,Kucera,1982,https://www.sciencedirect.com/science/article/pii/002001908290093X,,,,,,,,O(log(n)),O(log(n)),,O(n^4*log(n)),,,,,,,SIMD-SM-RW (CRCW PRAM?),,,,,,,,,0,,0,,0,1,n^4,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,biconnected components,,Vertex collapse method,,,,"Expected span: O(log log(n))
+Expected work: O(n^3*log log(n) / log(n))",,,,Reif and Spirakis,1982,https://apps.dtic.mil/sti/citations/ADA114875,,,,,,,,,,,,,,,,,,RP-RAM,,,,,,,,,1,"time w/ probability 1-exp(-kn^a) for some k,a >0",0,,0,1,O(n^3/log(n)) (expected),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,biconnected components,,Vertex collapse method,,,,"Expected span: O(log(n)*log log(n))
+Expected work: O(n^2*log log(n))",,,,Reif and Spirakis,1982,https://apps.dtic.mil/sti/citations/ADA114875,,,,,,,,,,,,,,,,,,P-RAM,,,,,,,,,1,"time w/ probability 1-exp(-kn^a) for some k,a >1",0,,0,1,O(n^2/log(n)) (expected),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,Vertex collapse method,,,,,,,,Hambrusch,1982,https://www.proquest.com/docview/303249065?pq-origsite=gscholar&fromopenview=true,,,,,,,,O(n^(3/2)),,,,,,,,,,Systolic array,,,,,,,,,,,,,,1,n,,1,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected graphs,,,,,,,,,,"KUMAR, GODDARD, PRINS",1995,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=6be104c34070706e469911987d861dce3293baac,,,,,,,,O(log n),O(log n),,O(n^2 log n),,,n: number of nodes,,,,Mesh-connected computer,,,,,,,,,0,,0,,0,1,n^2,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected graphs,,,,,,,,,,"KUMAR, GODDARD, PRINS",1995,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=6be104c34070706e469911987d861dce3293baac,,,,,,,,O((n/p + log p)*log n),O((n/p + log p)*log n),,O(n^2 log n),,,"n: number of nodes
+p^2: number of processors",,,,Mesh-connected computer,,,,,,,,,0,,0,,0,1,p^2,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected graphs,,,,,,,,,,"KUMAR, GODDARD, PRINS",1995,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=6be104c34070706e469911987d861dce3293baac,,,,,,,,O((n/p + log p)*log n),O((n/p + log p)*log n),,O(n*delta/p * log n),,,"n: number of nodes
+p^2: number of processors
+delta: maximum degree of a vertex",,,,Mesh-connected computer,,,,,,,,,0,,0,,0,1,p^2,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,connected components in undirected graph,,,,,,,,,,"Kruskal, Rudolph, Snir",1990,https://link.springer.com/article/10.1007/BF01840376,,,,,,,,P(m/p*log(n)/log(m/(p^2*log(p))) + n/p*log(p)),P(m/p*log(n)/log(m/(p^2*log(p))) + n/p*log(p)),,P(m*log(n)/log(m/(p^2*log(p))) + n*log(p)),,,"n: number of nodes
+m: number of edges
+p: number of processors",,,,MIMD EREW,,,,,,,,,0,,0,,0,1,"p <= m^{1/2-eps} for any eps>0
+log p <= m/n",0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,biconnected components,,,,,,,,,,"Kruskal, Rudolph, Snir",1990,https://link.springer.com/article/10.1007/BF01840376,,,,,,,,P(m/p*log(n)/log(m/(p^2*log(p))) + n/p*log(p)),P(m/p*log(n)/log(m/(p^2*log(p))) + n/p*log(p)),,P(m*log(n)/log(m/(p^2*log(p))) + n*log(p)),,,"n: number of nodes
+m: number of edges
+p: number of processors",,,,MIMD EREW,,,,,,,,,0,,0,,0,1,"p <= m^{1/2-eps} for any eps>0
+log p <= m/n",0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,"Gazit, Miller",1988,http://www.cs.cmu.edu/~glmiller/Publications/GaMi88.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://anna.fi.muni.cz/~xbarnat/Doc/barnat_hab_cela.pdf#page=115,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,"Cole, Vishkin",1989,https://www.sciencedirect.com/science/article/pii/0890540189900369/pdf?md5=78fcc1ee8f52d0433144fd3e62697bd8&pid=1-s2.0-0890540189900369-main.pdf,,,,,,,,O(log^2 n),,,,,,,,,,,,,,,,,,,,,,,,,n^{2.376},,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,planar directed graph,,,,,,,,,,Kao,1993,https://epubs.siam.org/doi/pdf/10.1137/0222032,,,,,,,,O(log^3 n),O(log^3 n),,O(n log^2 n),,,,,,,Arbitrary CRCW PRAM,,,,,,,,,0,,0,,0,1,n/log n,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,planar graph,,,,,,,,,,Bader,1999,https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1044&context=ece_rpts,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,,,,,Schudy,2008,https://dl.acm.org/doi/pdf/10.1145/1378533.1378560,,,,,,,,O(τ log^2 n),O(τ log^2 n),,O(pτ log^2 n),,,"n: number of nodes
+p: number of processors
+τ: runtime for a multi-source reachability query executed in parallel on p processors",,,,CRCW PRAM,,,,,,,,,1,Las-Vegas,0,,,1,p,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,,,,,Bloemen,2015,http://essay.utwente.nl/67128/1/Bloemen_MA_EEMCS.pdf,,,,,,,,O(|V| + |E|),O(|V| + |E|),,O(P · (|V| + |E|)),,,"V: number of vertices
+E: number of edges
+P: number of processors",,,,Unlisted (SIMD?),,,,,,,,,0,,0,,0,1,P,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,"Span: O(log n)*O(reachability span) guaranteed
+Work: O(reachability work)",,,,"Tomkins, Smith, Amato, Rauchwerger",2015,https://ldhulipala.github.io/readings/lognsquare-scc.pdf,,,,,,,,-,-,,-,,,n: number of nodes,,,,RB-SCC,,,,,,,,,1,Las Vegas,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,"Span: O(log n)*O(reachability span) guaranteed
+Work: O(m) guaranteed",,,,"Tomkins, Smith, Amato, Rauchwerger",2015,https://ldhulipala.github.io/readings/lognsquare-scc.pdf,,,,,,,,-,-,,-,,,"n: number of nodes
+m: number of edges",,,,RB-SCC,,,,,,,,,1,Las Vegas,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,Ja'Ja',1978,"J. Ja'Ja', ""Graph Connectivity Problems on Parallel Computers,"" TR GS-78-05, Dept. of Computer Science, Penn. State Univ., PA, 1978.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,"Fleischer, Hendrickson, Pınar",2000,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=4190183d58ff310dc61e833651c4147ef0dfc487,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://anna.fi.muni.cz/~xbarnat/Doc/barnat_hab_cela.pdf#page=115,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,biconnectivity of the complement of a given graph,,,,,,,,,,"Nikolopoulos, Palios",2007,https://www.sciencedirect.com/science/article/pii/S0166218X07000625,,,,,,,,O(log^2 n),O(log^2 n),,O(n+m),,,,,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O((n+m)/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,connected components of the complement of an undirected graph,,,,,,,,,,"Nikolopoulos, Palios",2007,https://www.sciencedirect.com/science/article/pii/S0166218X07000625,,,,,,,,O(log^2 n),O(log n),,O(n+m),,,,,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O((n+m)/log^2 n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,SCC of the complement of a given graph,,,,,,,,,,"Nikolopoulos, Palios",2007,https://www.sciencedirect.com/science/article/pii/S0166218X07000625,,,,,,,,O(log^2 n),O(log^2 n),,O(m^{1.188}*log n),,,,,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O(m^{1.188}/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,"POGORILYY, LOZYTSKYI ",2007,https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=2cfe35edfe3c6ca25b10cad7811786a80ff69cf0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,undirected graph; also transitive closure of a symmetric Boolean matrix,,,,,,,,,,"Hirschberg, Chandra, Sarwate",1979,https://dl.acm.org/doi/pdf/10.1145/359138.359141,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^2*log(n)),,,n: number of vertices,,,,SIMD-SM CREW,,,,,,,,,0,,0,,0,1,n ceilling(n/log^2(n)),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,"Expected time: O((n/r)*log^2(r)*log(n))
+Expected work: O(nr^2*log^2(r)*log(n))",,,,Spencer,1997,https://dl.acm.org/doi/pdf/10.1145/265910.265923,,,,,,,,,,,,,,"n: number of vertices
+m: number of edges
+r: in range sqrt(m/n) <= r <= n
+(r^3: number of processors)",,,,probabilitistic EREW PRAM,,,,,,,,,1,,0,,0,1,r^3,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,"Coppersmith, Fleischer, Hendrickson, Pinar",2005,"D. Coppersmith, L. Fleischer, B. Hendrickson, and A. Pinar. A divide-and-conquer algorithm for identifying strongly connected components. Technical Report RC23744, IBM Research, 2005",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,"Slota, Rajamanickam, Madduri",2013,https://www.osti.gov/servlets/purl/1115145,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,0,,,,,,,,,,,"Hong, Rodia, Olukotun",2013,https://ppl.stanford.edu/papers/sc13-hong.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,"Expected time: \tilde{O}(t)
+Expected work: \tilde{O}(n^3/t^2 + m)",,,,Spencer,1991,https://dl.acm.org/doi/pdf/10.1145/113379.113387,,,,,,,,,,,,,,"n: number of vertices
+m: number of edges
+t: longest shortest path?",,,,probabilitistic EREW PRAM,,,,,,,,,1,Las Vegas,0,,0,1,\tilde{O}(n^3/t^3 + m/t),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,"Expected time: \tilde{O}(t)
+Expected work: \tilde{O}(mn/t + n^3/t^3)",,,,Spencer,1991,https://dl.acm.org/doi/pdf/10.1145/113379.113387,,,,,,,,,,,,,,"n: number of vertices
+m: number of edges
+t: longest shortest path?",,,,probabilitistic EREW PRAM,,,,,,,,,1,Las Vegas,0,,0,1,\tilde{O}(mn/t^2 + n^3/t^4),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+13,Strongly Connected Components,1,,,,,,,"Expected time: \tilde{O}(t)
+Expected work: \tilde{O}(mn + n^3/t^5)",,,,Spencer,1991,https://dl.acm.org/doi/pdf/10.1145/113379.113387,,,,,,,,,,,,,,"n: number of vertices
+m: number of edges
+t: longest shortest path?",,,,probabilitistic EREW PRAM,,,,,,,,,1,Monte Carlo,0,,0,1,\tilde{O}(mn/t + n^3/t^6),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,"Undirected, General MST",163,Parallel algorithm,,1,1,O(E log(V)/p),,,[https://www.sciencedirect.com/science/article/pii/S0743731506001262 Bader & Cong Parallel Implementation  (2006)],Bader & Cong Parallel Implementation ,2006,https://www.sciencedirect.com/science/article/pii/S0743731506001262,,,,0,0,5.01,"E: 3,
+V: 5.01",O(E \log(V)/p),$O(E\log(V)/p)$,https://www.sciencedirect.com/science/article/pii/S0743731506001262,$O(E\log(V)$,https://www.sciencedirect.com/science/article/pii/S0743731506001262,only experimentally?,"V: number of vertices
+E: number of edges
+U: maximum edge weight
+p: number of processors",V,https://www.sciencedirect.com/science/article/pii/S0743731506001262,0,PRAM/SMPs?,words,3,"V: 3,
+E: 1",O(V) total,Initializes and uses a constant number of arrays of size O(V) (and does work similar to work done in Boruvka/Prim algorithm),1,0,,0,,0,,0,1,p,0,0,,"A minimum spanning tree (MST) or minimum weight spanning tree is a subset
+ of the edges of a connected; edge-weighted undirected graph that
+ connects all the vertices together; without any cycles and
+ with the minimum possible total edge weight.",,,,"V:E
+5:7",,,,,,,8.7,583.3333333,,,,,,,,5,,,Combinatorics
+14,Minimum Spanning Tree (MST),0.001,,,,,,,,,,"[https://dl.acm.org/doi/pdf/10.1145/2145816.2145842 Nobari, Cao, Karras, Bressan (2012)]","Nobari, Cao, Karras, Bressan",2012,https://dl.acm.org/doi/pdf/10.1145/2145816.2145842,,,,,,,,O(E\log(V)),,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Kruskal method,,,,,,,,Levitt and Kautz ,1972,https://dl.acm.org/doi/abs/10.1145/361573.361576,,,,,,,,O(n^2),O(n),,O(n^3),,,n: number of vertices,,,,"""Systolic array""",,,,,,,,,0,,0,,0,1,O(n^2),0,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,Levitt and Kautz ,1972,https://dl.acm.org/doi/abs/10.1145/361573.361576,,,,,,,,,O(N-n+1),,O(N*n^2),,,"n: number of vertices
+N: number of edges",,,,"""Systolic array""",,,,,,,,,0,,0,,0,1,O(n^2),0,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Sollin method,,,,,,,,Levitt and Kautz ,1972,https://dl.acm.org/doi/abs/10.1145/361573.361576,,,,,,,,,O(log n),,O(n^2*log n),,,n: number of vertices,,,,"""Systolic array""",,,,,,,,,0,,0,,0,1,O(n^2),0,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0.001,"connected, undirected, weighted",,Sollin method,,,,,,,,Savage,1977,https://www.proquest.com/docview/302856503?pq-origsite=gscholar&fromopenview=true,,,,,,,,O(log^2(n)),,,O(n^2) ??,,"yes? speedup=O(n^2/log^2(n))
+efficiency=O(1/log(n))",n: number of vertices,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n^2/log(n),,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2516,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,nonnegative weights,,Prim-Dijkstra method,,,,,,,,Bentley,1980,https://www.sciencedirect.com/science/article/pii/0196677480900048,,,,,,,,O(n log(n)),O(n log(n)),,O(n^2),,,n: number of vertices,,,,tree machine,,,,,,,,,0,,0,,0,1,n/log(n),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2517,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,Prim-Dijkstra method or Solin ??,,,,,,,,Deo and Yoo,1981,"DEO, N., AND YOO, Y. B. 1981. Parallel algorithms for the minimum spanning tree problem.",,,,,,,,,,,,,,,,,,MIMD-TC,,,,,,,,,,,,,,1,,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2518,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Sollin method,,,,,,,,Savage and Ja'Ja',1981,https://epubs.siam.org/doi/abs/10.1137/0210051,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^2*log^2(n)),,,n: number of vertices,,,,SIMD-SM-SR (CREW PRAM),,,,,,,,,0,,0,,0,1,n^2,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2519,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Sollin method,,,,,,,,Nath and Maheshwari,1982,https://www.sciencedirect.com/science/article/pii/0020019082901314,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^2*log(n)),,,n: number of vertices,,,,SIMD-SM (CREW PRAM),,,,,,,,,0,,0,,0,1,n^2/log(n),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2520,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Sollin method,,,,,,,,Nath and Maheshwari,1982,https://www.sciencedirect.com/science/article/pii/0020019082901314,,,,,,,,O(log^3(n)),O(log^3(n)),,O(n^2*log^2(n)),,,n: number of vertices,,,,SIMD-SM (EREW PRAM),,,,,,,,,0,,0,,0,1,n^2/log(n),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2520,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0.001,,,Kruskal method,,,,,,,,Kucera,1982,https://www.sciencedirect.com/science/article/pii/002001908290093X,,,,,,,,O(log(m)),,,,,,"n: number of edges
+m: number of edges",,,,SIMD-SM-RW (CRCW PRAM?),,,,,,,,,,,,,,1,mn^4,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2521,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Sollin method,,,,,,,,Chin et al.,1982,https://dl.acm.org/doi/abs/10.1145/358628.358650,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^2),,,n: number of vertices,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,,,,,,1,n ceiling(n/log^2(n)),,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2522,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,Sollin method,,,,,,,,Hambrusch,1982,https://www.proquest.com/docview/303249065?pq-origsite=gscholar&fromopenview=true,,,,,,,,O(n),,,,,,n: number of vertices,,,,"""Systolic array""",,,,,,,,,,,,,,1,n^2,,1,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2523,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,Sollin method,,,,,,,,Hirschberg,1982,"HIRSCHBERG, D. S. 1982. Parallel graph algorithms without memory conflicts.",,,,,,,,O(log(n)),,,,,,n: number of vertices,,,,SIMD-SM-RW (CRCW PRAM?),,,,,,,,,,,,,,1,O(n^3),,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2524,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,Kruskal method,,,,,,,,Yoo,1983,https://www.osti.gov/biblio/5689584,,,,,,,,O(m),,,,,,m: number of edges,,,,MIMD-TC,,,,,,,,,,,,,,1,O(m),,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2525,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,"""sufficiently dense""
+m/n >= p",,Sollin method,,,,,,,,"Dehne, Gotz",1998,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=740525,,,,,,,,O(log p),O(log p),,"T_seq(n,m/p) + 2*T_seq(n, Dn) + O(n) + g*n + L*log p",,,"n: number of nodes
+m: number of edges",,,,BSP,,,,,,,,,0,,0,,0,1,p (<= m/n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,Euclidean MST,,,,,,,,,,"Wang, Yu, Gu, Shun",2021,https://dl.acm.org/doi/pdf/10.1145/3448016.3457296,,,,,,,,𝑂(log^2 𝑛),𝑂(log^2 𝑛),,𝑂(𝑛^2),,,n: number of vertices,,,,work-depth,,,,,,,,,0,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,undirected,,,,,,,,,,"Johnson, Metaxas",1992,https://dl.acm.org/doi/pdf/10.1145/140901.141917,,,,,,,,O(log^{3/2}(n)),O(log^{3/2}(n)),,O(log^{3/2}(n)*(n+m)),,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,0,,0,,0,1,n+m,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Sollin method,,,,O((t_s + t_w)*m/p + log(n)*log log n),,,,"Chung, Condon",1996,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=508073,,,,,,,,,,,,,,"n: number of nodes
+m: number of edges",,,,"a distributed memory model, in which processors communicate using messages",,,,,,,,,,,,,1,1,p,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,updating MST after k graph changes,,,,,,,,,,"Pawagi, Kaser",1991,https://link.springer.com/content/pdf/10.1007/BF01228509.pdf,,,,,,,,O(log n * log k),O(log n * log k),,O(nk),,,"n: number of nodes
+k: number of changes to the graph (ins/del/cost changes)",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,nk/(log n * log k),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,,,,,,,,,"Setia, Nedunchezhian, Balachandran",2009,https://www.researchgate.net/profile/Shankar-Balachandran/publication/228826032_A_new_parallel_algorithm_for_minimum_spanning_tree_problem/links/55938e4208ae1e9cb429a84e/A-new-parallel-algorithm-for-minimum-spanning-tree-problem.pdf,,,,,,,,,,,,,,,,,,SMP w/ shared memory,,,,,,,,,,,,,1,1,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"Tripathy, Ray",2013,https://www.proquest.com/docview/1505018621,,,,,,,,O(m*log(n)/p),O(m*log(n)/p),,O(m*log(n)),,,"n: number of nodes
+m: number of edges
+p: number of processors",,,,"""multiprocessor system"", ""shared memory""",,,,,,,,,0,,0,,0,1,p <=n,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,relatively dense graphs (m >= n*p),,,,,,,,,,"Adler, Dittrich, Juurlink, Kutylowski, Rieping",1998,https://dl.acm.org/doi/pdf/10.1145/277651.277662,,,,,,,,O(log p),O(log p),,O(m/p + n * log log p + g * n + L* log p),,,"n: number of nodes
+m: number of edges
+p: number of processors",,,,BSP,,,,,,,,,0,,0,,0,1,p <= m/n,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,"relatively dense graphs (p^{1+eps} <= m/n, eps > 0)",,,,,,,,,,"Adler, Dittrich, Juurlink, Kutylowski, Rieping",1998,https://dl.acm.org/doi/pdf/10.1145/277651.277662,,,,,,,,O(1),O(1),,O(m/p + n + g*m/p^{1+eps/2} + L),,,"n: number of nodes
+m: number of edges
+p: number of processors",,,,BSP,,,,,,,,,0,,0,,0,1,"p^{1+eps} <= m/n
+esp > 0",0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,all but very sparse graphs,,,,,,,,,,"Adler, Dittrich, Juurlink, Kutylowski, Rieping",1998,https://dl.acm.org/doi/pdf/10.1145/277651.277662,,,,,,,,O(log^2(p)/log((m+n)/p)),O(log^2(p)/log((m+n)/p)),,O(m/p + n/p*log p + g*(m/p + n/p*log p) + L*(log^2(p)/log((m+n)/p))) ,,,"n: number of nodes
+m: number of edges
+p: number of processors",,,,BSP,,,,,,,,,1,runtime bounds probability 1 - p^{-c} for any constant c > 0,0,,0,1,"p <= m + n
+log p <= m/n <= p
+eps > 0",0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"Chong, Han, Lam",1999,https://hub.hku.hk/bitstream/10722/45607/1/40756.pdf?accept=1,,,,,,,,O(log n),O(log n),,O((n+m)*log n),,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,0,,0,,0,1,m+n,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,,,,,"Linear expected work
+O(log n 2^{log^r (n)}) runtime",,https://dl.acm.org/doi/pdf/10.1145/201019.201022,,"Cole, Klein, Tarjan",1994,"R. Cole, P.N. Klein, R.E. Tarjan, A linear-work parallel algorithm for finding minimum spanning trees, in: Proceedings of the Sixth Annual Symposium on Parallel Algorithms and Architectures (SPAA94), Newport, RI, ACM, New York, June 1994, pp. 11–15.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"Cole, Klein, Tarjan",1996,https://dl.acm.org/doi/pdf/10.1145/237502.237563,,,,,,,,O(log n),O(log n),,O(n),,,n: number of nodes,,,,CRCW PRAM,,,,,,,,,1,,0,,0,1,n/log n,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,undirected graph,,,,,,,,,,"PETTIE, RAMACHANDRAN",1999,https://epubs.siam.org/doi/epdf/10.1137/S0097539700371065,,,,,,,,O(log n),O(log n),,O(m+n),,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,1,1 - p^{-c} for any constant c > 0,0,,0,1,(m+n)/log n,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,m >= n/2,,,,,,"Expected time: o((log n)^{1+eps}) for any eps > 0
+Expected work: O(m)",,,,"Poon, Ramachandran",1997,https://www.cs.utexas.edu/~vlr/papers/mst97.pdf,,,,,,,,,,,,,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,1,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,updating the MST after adding 1 node,,,,,,,,,,"Jung, Mehlhorn",1988,https://www.sciencedirect.com/science/article/pii/0020019088900841,,,,,,,,O(log n),O(log n),,O(n),,,n: number of nodes,,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,n/log n,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,updating MST after k graph changes,,,,,,,,,,"Shen, Liang",1993,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=262898,,,,,,,,O(log k * log n) ,O(log k * log n) ,,O(n^2),,,"n: number of nodes
+k: number of changes to the graph (ins/del/cost changes)",,,,SIMD CREW PRAM,,,,,,,,,0,,0,,0,1,O(n^2/(log k * log n)),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Prim's,,,,,,,,Akl,1986,https://link.springer.com/article/10.1007/BF02240073,,,,,,,,O(n),O(n),,O(n^2),,,n: number of nodes,,,,SM-SIMD (CRCW),,,,,,,,,0,,0,,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,,,,,,,,,Zhou,2017,http://algo2.iti.kit.edu/documents/Theses/msThesisZhou.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,Kruskal,,,,,,,,"Suraweera, Bhattacharya",1993,https://www.sciencedirect.com/science/article/pii/0020019093900196,,,,,,,,O(log m),O(log m),,O(m log m),,,"n: number of nodes
+m: number of edges",,,,PRAM-CRCW,,,,,,,,,0,,0,,0,1,O(m),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"AHRABIAN, NOWZARI-DALINI",2002,https://www.tandfonline.com/doi/pdf/10.1080/00207160210945,,,,,,,,O(n^2 log n),O(n^2 log n),,O(n^3),,,n: number of nodes,,,,,,,,,,,,,0,,0,,0,1,O(n/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"AHRABIAN, NOWZARI-DALINI",2002,https://www.tandfonline.com/doi/pdf/10.1080/00207160210945,,,,,,,,O(n^3*log(p)/p),O(n^3*log(p)/p),,O(n^3*log(p)),,,"n: number of nodes
+p: number of processors",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,p,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"Kruskal, Rudolph, Snir",1990,https://link.springer.com/article/10.1007/BF01840376,,,,,,,,O(m*log(n)/p + log(n)*log(p),O(m*log(n)/p + log(n)*log(p),,O(m*log(n) + p*log(n)*log(p),,,"n: number of nodes
+m: number of edges
+p: number of processors",,,,MIMD EREW,,,,,,,,,0,,0,,0,1,p <= m/log(m),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,Karger,1992,"KARGER, D. R. 1992. Approximating, verifying, and constructing minimum spanmng forests. Manuscript.",,,,,,,,O(log n),O(log n),,m + n^{1+eps}*log(n) for any eps>0,https://www.sciencedirect.com/science/article/pii/B9780444880710500229,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,,,0,,0,1,m/log(n) + n^{1+eps} for any eps>0,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,Zaroliagis,1997,https://www.researchgate.net/profile/Christos-Zaroliagis/publication/47842817_Simple_and_Work-Efficient_Parallel_Algorithms_for_the_Minimum_Spanning_Tree_Problem/links/53e256010cf275a5fdd6ba3e/Simple-and-Work-Efficient-Parallel-Algorithms-for-the-Minimum-Spanning-Tree-Problem.pdf,,,,,,,,O(log^2 n),O(log^2 n),,O(m log n),,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O(m/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,Zaroliagis,1997,https://www.researchgate.net/profile/Christos-Zaroliagis/publication/47842817_Simple_and_Work-Efficient_Parallel_Algorithms_for_the_Minimum_Spanning_Tree_Problem/links/53e256010cf275a5fdd6ba3e/Simple-and-Work-Efficient-Parallel-Algorithms-for-the-Minimum-Spanning-Tree-Problem.pdf,,,,,,,,O(log n),O(log n),,O(m log n),,,"n: number of nodes
+m: number of edges",,,,COMMON CRCW PRAM,,,,,,,,,0,,0,,0,1,O(m),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,Degree-Constrained MST,,,,,,,,,,"Mao, Deo, Lang",1999,https://ieeexplore.ieee.org/iel5/6313/16882/00778937.pdf,,,,,,,,,,,,,,"n: number of nodes
+d: maximum degree of any node in the spanning tree",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,updating MST after 1 graph change,,,,,,,,,,"Pawagi, Ramakrishnan",1986,https://www.sciencedirect.com/science/article/pii/0020019086900980,,,,,,,,O(log n),O(log n),,O(n^2*log n),,,n: number of nodes,,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O(n^2),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"Chong, Han, Igarashi, Lam",2001,https://www.sciencedirect.com/science/article/pii/S0166218X02005607,,,,,,,,O(log n),O(log n),,O((m+n)*sqrt(log n)),,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O((m+n)/sqrt(log n)),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"Chong, Han, Igarashi, Lam",2001,https://www.sciencedirect.com/science/article/pii/S0166218X02005607,,,,,,,,O(log n),O(log n),,O((m+n)*log log n),,,"n: number of nodes
+m: number of edges",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O((m+n)*log log n/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,dense graphs,,,,,,,,,,"Chong, Han, Igarashi, Lam",2001,https://www.sciencedirect.com/science/article/pii/S0166218X02005607,,,,,,,,O(log n),O(log n),,O(n^2),,,"n: number of nodes
+m: number of edges",,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O(n^2/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,"minimum k spanning trees, 2<=k<=n^{n-2}",,,,,,,,,,"Ma, Iwama, Gu",1997,https://ieeexplore.ieee.org/abstract/document/581705,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,updating MST after deleting 1 node; determines the set of new MST edges for the potential deleting of every node,,,,,,,,,,Das & Loui ,2001,https://link.springer.com/article/10.1007/s00453-001-0061-3,,,,,,,,O(log^2 n),O(log^2 n),,O(m*log^2 n),,,"n: number of nodes
+m: number of edges",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,m,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,,,,,,,,,"Khuller, Raghavachari, Young",1995,https://link.springer.com/article/10.1007/BF01294129,,,,,,,,,,,,,,,,,,CREW PRAM,,,,,,,,,,,1,,,,n,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,updating MST after adding 1 node,,,,,,,,,,"Varman, Doshi",1988,https://www.sciencedirect.com/science/article/pii/0304397588900357,,,,,,,,O(log n),O(log n),,O(n*log n),,,n: number of nodes,,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,"Chong, Han, Lam",2001,https://dl.acm.org/doi/abs/10.1145/375827.375847,,,,,,,,O(log n),O(log n),,O(n*log n),,,n: number of nodes,,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,,,,,,,,,"Cole, Vishkin",1986,https://ieeexplore.ieee.org/iel5/4568183/4568184/04568239.pdf,,,,,,,,O(log n),O(log n),,O((n + m)log log n),,,,,,,CRCW PRAM,,,,,,,,,,,,,,,O((n + m)log log n/log n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),0,,,,,,,,,,,Reif and Spirakis,1982,https://apps.dtic.mil/sti/citations/ADA114875,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+14,Minimum Spanning Tree (MST),1,,,,,,,,,,,Savage,1981,https://link.springer.com/chapter/10.1007/978-3-642-68402-9_32,,,,,,,,O(m+n),O(m+n),,O(n(m+n)),,,"n: number of nodes
+m: number of edges",,,,Systolic array,,,,,,,,,0,,0,,0,1,n+1,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+15,Closest Pair Problem,1,"2-dimensional space, Euclidean metric",,,,,,,,,[https://link.springer.com/article/10.1007/BF01758749 Cole & Gooddrich (1988)],Cole & Gooddrich,1988,https://link.springer.com/article/10.1007/BF01758749,,,,,,,,O(log n),O(log n),https://link.springer.com/article/10.1007/BF01758749,O(n log n),https://link.springer.com/article/10.1007/BF01758749,no,n: number of points,,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,"Given $n$ points in 2-dimensional space equipped with the Eucildean metric, find a pair of points with the smallest distance between them. ",,,,,,,,,,,,,,,,,,,,,,,
+15,Closest Pair Problem,1,"k-dimensional space, $l_m$ (or $l_\infty$) norm",,,,,,,,,[https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834886 Lenhof & Smid (1992)],Lenhof & Smid,1992,https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834886,,,,,,,,O((log n)^2 log log n),O((log n)^2 log log n),https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834886,O(nlog n log log n + k),https://pure.mpg.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_1834886,no,"n: number of points
+k: kth closest pair",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(n/log n + k/((log n)^2 log log n)),0,0,,"Given $n$ points in metric space, typically $k$-dimensional space equipped with $l_m$ (or $l_\infty$) norm, find a pair of points with the smallest distance between them. ",,,,,,,,,,,,,,,,,,,,,,,
+15,Closest Pair Problem,1,2-dimensional array representation,173,,,1,1,O(n) using O(n^2) processors,,,[https://www.sciencedirect.com/science/article/pii/0020019080900356 Dyer (1980)],Dyer,1980,https://www.sciencedirect.com/science/article/pii/0020019080900356,,,,0,0,3,n: 3,$O(n)$ using $O(n^2)$ processors,$O(n)$,https://www.sciencedirect.com/science/article/pii/0020019080900356,$O(n^2)$?,https://www.sciencedirect.com/science/article/pii/0020019080900356,no,n: number of points,n,,,log-space pyramid cellular automaton,words,5,n: 5,O(n^2),https://www.sciencedirect.com/science/article/pii/0020019080900356,0,1,,0,,0,,0,1,O(n^2),0,0,,"given n points in metric space; find a pair of points with the smallest
+ distance between them. ",,,,,,,,,,,1000,1000,,,,,,,,4,,,Image Processing
+17,All-Pairs Shortest Paths (APSP),1,,,Warshall-Floyd method,,,,,,,,Levitt and Kautz,1972,https://dl.acm.org/doi/abs/10.1145/361573.361576,,,,,,,,O(n),O(n),,O(n^3),,,n: number of vertices,,,,Systolic array,,,,,,,,,0,,0,,0,1,n^2,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,Warshall-Floyd method,,,,,,,,Arjomandi,1975,https://dl.acm.org/doi/abs/10.5555/908319,,,,,,,,,,,,,,,,,,MIMD-TC,,,,,,,,,,,,,,1,,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,Repeated plus-min method,,,,,,,,Savage,1977,https://apps.dtic.mil/sti/citations/ADA056888,,,,,,,,O(log^2(n)),O(log^2(n)),"section 7.2, page 104",O(n^3*log(n)),,,n: number of vertices,,,,SIMD-SM-R (CREW PRAM?),,,,,,,,,0,,0,,0,1,n^3/log(n),0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,Warshall-Floyd method,,,,,,,,Deo et al.,1980,https://cir.nii.ac.jp/crid/1571698600670249216,,,,,,,,O(n^3/p+pn),,,,,,,,,,MIMD-TC,,,,,,,,,,,,,,1,p<<n,,,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,Repeated plus-min method,,,,,,,,Dekel; Nassimi & Sahni,1981,https://epubs.siam.org/doi/abs/10.1137/0210049,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^3*log^2(n)),,,n: number of vertices,,,,"SIMD-PS, SIMD-CC",,,,,,,,,0,,0,,0,1,n^3,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,Repeated plus-min method,,,,,,,,Kucera,1982,https://www.sciencedirect.com/science/article/pii/002001908290093X,,,,,,,,O(log(n)),O(log(n)),,O(n^4*log(n)),,,n: number of vertices,,,,SIMD-SM-RW (CRCW PRAM?),,,,,,,,,0,,0,,0,1,n^4,0,0,originally found in  https://dl.acm.org/doi/pdf/10.1145/2514.2515,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,,,,,"O(log log n)
+Work: O(n^3 log log n)","""Edge lengths are independent identically distributed nonnegative random variables. Each edge length has a distribution function F with F(0)=0 and that F is differentiable at zero.""",,,Frieze & Rudolph,1984,http://math.cmu.edu/~af1p/Texfiles/PARALLELALG.pdf,,,,,,,,,,,,,,n: number of vertices,,,,PRAM-CRCW,,,,,,,,,,,,,,1,n^3,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,Jenq & Sahni,1987,https://digitalcommons.montclair.edu/compusci-facpubs/96/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,directed graph with nonnegative edge costs,,,,,,"O(alpha*log log n)
+Work: O(alpha*n^{2.5+1/\alpha)*log log n)","""elements of the input distance matrix are independent random variables drawn from an identical distribution. """,,,Takaoka,1989,https://link.springer.com/content/pdf/10.1007/3-540-50728-0_51.pdf,,,,,,,,,,,,,,n: number of vertices,,,,SIMD-SM-RW ,,,,,,,,,1,,,,,1,n^{2.5+1/\alpha),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,,,,,,,,,Takaoka,1992,https://www.sciencedirect.com/science/article/pii/002001909290200F,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^3*(log n)^{1/2}*(log log n)^{1/2}),,,n: number of vertices,,,,PRAM-EREW,,,,,,,,,0,,0,,0,1,O(n^3*(log log n)^{1/2}/(log n)^{3/2}),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,,,,,,,,,"Han, Pan & Reif",1992,https://dl.acm.org/doi/pdf/10.1145/140901.141913,,,,,,,,O(log^2(n)),O(log^2(n)),,o(n^3),,,"n: number of vertices
+p: number of processors",,,,PRAM-EREW,,,,,,,,,0,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,,,,,,,,,"Han, Pan & Reif",1992,https://dl.acm.org/doi/pdf/10.1145/140901.141913,,,,,,,,O(log(n)*log(log n)),O(log(n)*log(log n)),,o(n^3),,,"n: number of vertices
+p: number of processors",,,,PRAM-CRCW,,,,,,,,,0,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,,,,,,,,,"Han, Pan & Reif",1992,https://dl.acm.org/doi/pdf/10.1145/140901.141913,,,,,,,,O(log n),O(log n),,O(n^3),,,"n: number of vertices
+p: number of processors",,,,PRAM-CRCW,,,,,,,,,1,,,,,1,n^3,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,directed planar graph with real-valued edge costs but no negative cycles,,fundamental hammock-decomposition,,,,,,,,"Pantziou, Spirakis, Zaroliagis ",1992,https://link.springer.com/article/10.1007/BF01994878,,,,,,,,O(log^2(n)),O(log^2(n)),,O((nq + M(q))*log^2(n)),,,"n: number of vertices
+q: cardinality of a face-on-vertex covering for a plane embedding
+M(q): # of processors required to multiply 2 qxq matrices in O(log q) time",,,,PRAM-CREW,,,,,,,,,0,,0,,0,1,O(nq + M(q)),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,"Romeijn, Smith",1993,https://deepblue.lib.umich.edu/bitstream/handle/2027.42/7309/bap3247.0001.001.pdf?sequence=5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,interval graphs; circular-arc graphs,,,,,,,,,,"Chen, Lee",1994,https://ieeexplore.ieee.org/abstract/document/288297,,,,,,,,sorting + O(log n),,,sorting + O(n),,,,,,,PRAM-CREW,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,unweighted interval graph,,,,,,,,,,Pal & Bhattacharjee,1997,https://dl.acm.org/doi/abs/10.5555/640121.640124,,,,,,,,O(n/p + log n),O(n/p + log n),,O(n^2+np*log n),,,"n: number of vertices
+np: number of processors",,,,PRAM-EREW,,,,,,,,,,,,,,,np,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,chordal graphs,,,,,,,,,,"Han, Sekharan, Sridhar",1997,https://www.sciencedirect.com/science/article/pii/S0166218X96001035,,,,,,,,O(log^2(n)),O(log^2(n)),,O(M(n)),,,"n: number of nodes
+M(n): time required for multiplying two nxn matrices",,,,PRAM-CREW,,,,,,,,,0,,0,,0,1,O(M(n)/log^2(n) + n^2/log^2(n)),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,,,,,,,,,Takaoka,1998,https://link.springer.com/article/10.1007/PL00009198,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^3(log log n)^{3/2}/(log n)^{1/2}) = o(n^3),,,n: number of vertices,,,,PRAM-EREW,,,,,,,,,0,,0,,0,1,O(n^3(log log n)^{3/2}/(log n)^{5/2}),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0.001,,,,,,,,,,,"Chen, Lee, Sridhar, Sekharan",1998,https://onlinelibrary.wiley.com/doi/pdf/10.1002/(SICI)1097-0037(199807)31:4%3C249::AID-NET5%3E3.0.CO;2-D,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,weighted directed dense graph,,,,,,,,,,Tiskin,2001,https://www.researchgate.net/profile/Jan-Van-Leeuwen/publication/242498580_Automata_Languages_and_Programming_28th_International_Colloquium_ICALP_2001_Crete_Greece_July_8-12_2001_Proceedings/links/0a85e53cd28b9617d1000000/Automata-Languages-and-Programming-28th-International-Colloquium-ICALP-2001-Crete-Greece-July-8-12-2001-Proceedings.pdf#page=192,,,,,,,,,,,O(n^3/p + g*(n^2/p^{2/3}) + l* log p),,,"n: number of nodes
+p: number of processors
+g: communication throughput ratio (aka gap)
+l: communication latency",,,,BSP,,,,,,,,,,,,,,,p,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,,,,,,,,,Takaoka,2004,https://link.springer.com/chapter/10.1007/978-3-540-27798-9_31,,,,,,,,O(log log n),O(log log n),,O(n^3*log^2(log n)/log n),,,n: number of vertices,,,,PRAM-EREW,,,,,,,,,0,,0,,0,1,O(n^3*log(log n)/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,circular-arc graphs,,,,,,,,,,"Saha, Pal & Pal",2005,https://link.springer.com/article/10.1007/BF02936037,,,,,,,,O(n^2/p+ log n),O(n^2/p+ log n),,O(n^2+p*log n),,,"n: number of vertices
+p: number of processors",,,,PRAM-EREW,,,,,,,,,0,,0,,0,1,p,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,Katz & Kider,2008,https://repository.upenn.edu/hms/180/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,Tran,2010,https://ieeexplore.ieee.org/abstract/document/5501465/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,"Buluç, Gilbert, Budak",2010,https://www.sciencedirect.com/science/article/pii/S0167819109001240,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,Yanagisawa,2010,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5470362,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,,,Repeated plus-min method,,,,,,,," Zhang, Wu, Wei & Wang",2011,https://www.sciencedirect.com/science/article/pii/S1051200411000650,,,,,,,,O(log^2(n)),O(log^2(n)),,O(n^2*log^2(n)),,,n: number of vertices,,,,PCNN,,,,,,,,,0,,0,,0,1,O(n^2),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,"Okuyama, Ino, Hagihara",2012,https://www.researchgate.net/profile/Fumihiko-Ino/publication/262236119_A_task_parallel_algorithm_for_finding_all-pairs_shortest_paths_using_the_GPU/links/00b49536c9c521a413000000/A-task-parallel-algorithm-for-finding-all-pairs-shortest-paths-using-the-GPU.pdf,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0.001,,,,,,,,,,,"Solomonik, Buluç, Demmel",2013,https://ieeexplore.ieee.org/abstract/document/6569841,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,"Djidjev, Thulasidasan, Chapuis, Andonov, Lavenier
+",2014,https://ieeexplore.ieee.org/abstract/document/6877270/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,planar graphs,,,,,,,,,,"Djidjev, Chapuis, Andonov, Thulasidasan, Lavenier",2015,https://www.sciencedirect.com/science/article/pii/S0743731515001069,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),0,,,,,,,,,,,"Kim, Choi, Bae",2018,https://dl.acm.org/doi/pdf/10.1145/3229710.3229730,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+17,All-Pairs Shortest Paths (APSP),1,sparse graphs,,,,,,,,,,"Sao, Kannan, Gera, Vuduc",2020,https://dl.acm.org/doi/abs/10.1145/3332466.3374533,,,,,,,,,O(|S|*log^2(n)),,O(n^2*|S|),,,"n: number of vertices
+|S|: size of the top level separator",,,,PRAM-CREW,,,,,,,,,0,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+19,Integer Factoring,0.001,Second Category Integer Factoring,204,,,1,1,O(e^{sqrt((2+o(1))n*logn)}),,,[https://www.ams.org/journals/mcom/1993-61-203/S0025-5718-1993-1182953-4/S0025-5718-1993-1182953-4.pdf Rational sieve (1993)],Rational sieve,1993,https://www.ams.org/journals/mcom/1993-61-203/S0025-5718-1993-1182953-4/S0025-5718-1993-1182953-4.pdf,,,,0,0,8,n: 8,O(e^{sqrt((2+o(1))n*logn)}),,,,,no,"n: number of bits in the integer
+B: bound parameter",n,,,Word RAM?,bits,3,"n: 3,
+B: 5",O(n+(B/logB)^2)?,Same general approach as Dixon's algorithm,1,0,,0,,0,,0,1,,0,0,,has a running time which depends solely on the size of the integer to be factored.,,,,,,,,,,,,,,,,,,,,4,,,Numerical Analysis
+22,String Search,1,Single String Search,,,,1,1,O(log n),,,[https://dl.acm.org/doi/pdf/10.1145/72935.72977 Kedem et al. (1989)],Kedem et al.,1989,https://dl.acm.org/doi/pdf/10.1145/72935.72977,,,,,,,,O(log n),O(log n),https://dl.acm.org/doi/pdf/10.1145/72935.72977,O(n),https://dl.acm.org/doi/pdf/10.1145/72935.72977,yes,"n: length of text
+m: length of pattern",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(n/log n),0,0,,Single string search algorithms try to find a place where a string (also called a pattern) is found within a larger string or text.,,,,,,,,,,,,,,,,,,,,,,,
+22,String Search,1,Single String Search,,,,1,1,O(1),,,[https://dl.acm.org/doi/pdf/10.1145/210332.210341 Galil (1995)],Galil,1995,https://dl.acm.org/doi/pdf/10.1145/210332.210341,,,,,,,,O(1),O(1),https://dl.acm.org/doi/pdf/10.1145/210332.210341,O(n),https://dl.acm.org/doi/pdf/10.1145/210332.210341,yes,"n: length of text
+m: length of pattern",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,Single string search algorithms try to find a place where a string (also called a pattern) is found within a larger string or text.,,,,,,,,,,,,,,,,,,,,,,,
+22,String Search,1,Single String Search,,,,1,1,O(log log m),,,[https://dl.acm.org/doi/pdf/10.1145/73007.73036 Berkman et al. (1989)],Berkman et al.,1989,https://dl.acm.org/doi/pdf/10.1145/73007.73036,,,,,,,,O(log log m),O(log log m),https://dl.acm.org/doi/pdf/10.1145/73007.73036,O(n),https://dl.acm.org/doi/pdf/10.1145/73007.73036,yes,"n: length of text
+m: length of pattern",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(n/log log m),0,0,,Single string search algorithms try to find a place where a string (also called a pattern) is found within a larger string or text.,,,,,,,,,,,,,,,,,,,,,,,
+22,String Search,1,Single String Search,,,,1,1,O(log m),,,[https://www.sciencedirect.com/science/article/pii/S0019995885800280 Vishkin (1985)],Vishkin,1985,https://www.sciencedirect.com/science/article/pii/S0019995885800280,,,,,,,,O(log m),O(log m),https://www.sciencedirect.com/science/article/pii/S0019995885800280,O(n),https://www.sciencedirect.com/science/article/pii/S0019995885800280,yes,"n: length of text
+m: length of pattern",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(n/log m),0,0,,Single string search algorithms try to find a place where a string (also called a pattern) is found within a larger string or text.,,,,,,,,,,,,,,,,,,,,,,,
+22,String Search,1,Single String Search,,,,1,1,O(1),,,[https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=148407&casa_token=rbrxJVaeHrEAAAAA:5dv2PD5J0OsZhMatc_iNgGGFJdEVFZBr8VbrhD_STK4sCUCVflk-LBRPUeBy16J-QVVj6Dcv&tag=1 Takefuji et al. (1992)],Takefuji et al.,1992,https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=148407&casa_token=rbrxJVaeHrEAAAAA:5dv2PD5J0OsZhMatc_iNgGGFJdEVFZBr8VbrhD_STK4sCUCVflk-LBRPUeBy16J-QVVj6Dcv&tag=1,,,,,,,,O(1),O(1),https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=148407&casa_token=rbrxJVaeHrEAAAAA:5dv2PD5J0OsZhMatc_iNgGGFJdEVFZBr8VbrhD_STK4sCUCVflk-LBRPUeBy16J-QVVj6Dcv&tag=1,O(nm),https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=148407&casa_token=rbrxJVaeHrEAAAAA:5dv2PD5J0OsZhMatc_iNgGGFJdEVFZBr8VbrhD_STK4sCUCVflk-LBRPUeBy16J-QVVj6Dcv&tag=1,yes,"n: length of text
+m: length of pattern",,,,Neural Network?,,,,,,,,,0,,0,,0,1,O(nm),0,0,,Single string search algorithms try to find a place where a string (also called a pattern) is found within a larger string or text.,,,,,,,,,,,,,,,,,,,,,,,
+22,String Search,0.001,Single String Search,243,,,1,1,O(n (\log_s m)/m),,,[https://link.springer.com/chapter/10.1007/BFb0030778 Backward Non-Deterministic DAWG Matching (BNDM) (1998)],Backward Non-Deterministic DAWG Matching (BNDM),1998,https://link.springer.com/chapter/10.1007/BFb0030778,,,,0,0,3,"n: 3,
+m: 3,
+m+n: 3",O(n+m),,,,,,"$m$: pattern length
+$n$: length of searchable text
+$s$: size of the alphabet",m+n,,,Word RAM with bit parallelism,words,3,"m: 3,
+s: 3,
+m+n: 3",$O(sm)$,https://link.springer.com/chapter/10.1007/BFb0030778,0,1,,0,,0,,0,1,,0,0,,"try to find a place where one or several strings (also called patterns) are
+ found within a larger string or text.",,,,"n:m
+9:1",,,,,,,,,,,,,,,,4,,,Combinatorics
+23,Sequence Alignment,1,"Edit Distance, constant-size alphabet",,,,1,1,,,,[https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313 Apostolico et al. (1990)],Apostolico et al.,1990,https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,,,,,,,,O(log m log n),O(log m log n),https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,O(mn log n),https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,no,"m: length of the shorter string
+n: length of the longer string",,,,CREW PRAM,,,,,,,,,0,,0,,0,1,O(mn/log m),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+23,Sequence Alignment,1,"Edit Distance, constant-size alphabet",,,,1,1,,,,[https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666314 Apostolico et al. (1990)],Apostolico et al.,1990,https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666314,,,,,,,,O(log n (log log m)^2),O(log n (log log m)^2),https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,O(mn log n),https://search.proquest.com/openview/efa7264fa824ce7768c53ccdcc6d1458/1?pq-origsite=gscholar&cbl=666313,no,"m: length of the shorter string
+n: length of the longer string",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(mn/log log m),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+23,Sequence Alignment,1,"Edit Distance, constant-size alphabet",,,,1,1,,,,[https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1 Mathies (1988)],Mathies,1988,https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1,,,,,,,,O(log m log n),O(log m log n),https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1,O(mn log m log n),https://kilthub.cmu.edu/articles/journal_contribution/A_fast_parallel_algorithm_to_determine_edit_distance/6587387/1,no,"m: length of the shorter string
+n: length of the longer string",,,,CRCW PRAM,,,,,,,,,0,,0,,0,1,O(mn),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+28,Maximum Cardinality Matching,1,General Graph MCM,,,,1,1,,,,[https://ieeexplore.ieee.org/document/395918 Andrews et al. (1995)],Andrews et al.,1995,https://ieeexplore.ieee.org/document/395918,,,,,,,,O(log^3 n),O(log^3 n),https://ieeexplore.ieee.org/document/395918,O(n log n),https://ieeexplore.ieee.org/document/395918,no,n: number of intervals representing the graph,n,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O(n/log^2 n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+28,Maximum Cardinality Matching,1,General Graph MCM,,,,1,1,,,,[https://ieeexplore.ieee.org/document/395919 Andrews et al. (1995)],Andrews et al.,1995,https://ieeexplore.ieee.org/document/395919,,,,,,,,O(log^3 n),O(log^3 n),https://ieeexplore.ieee.org/document/395918,O(n log^3 n),https://ieeexplore.ieee.org/document/395918,no,n: number of intervals representing the graph,n,,,n-Hypercube,,,,,,,,,0,,0,,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+28,Maximum Cardinality Matching,1,Interval Graph?,,,,1,1,,,,[https://ieeexplore.ieee.org/document/395920 Andrews et al. (1995)],Andrews et al.,1995,https://ieeexplore.ieee.org/document/395920,,,,,,,,O(log n),O(log n),https://ieeexplore.ieee.org/document/395919,O(n log n),https://ieeexplore.ieee.org/document/395919,no,n: number of intervals representing the graph,n,,,EREW PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+28,Maximum Cardinality Matching,1,Interval Graph?,,,,1,1,,,,[https://ieeexplore.ieee.org/document/395921 Andrews et al. (1995)],Andrews et al.,1995,https://ieeexplore.ieee.org/document/395921,,,,,,,,O(log n log log n),O(log n log log n),https://ieeexplore.ieee.org/document/395920,O(n log n log log n),https://ieeexplore.ieee.org/document/395920,no,n: number of intervals representing the graph,n,,,n-Hypercube,,,,,,,,,0,,0,,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+28,Maximum Cardinality Matching,0.001,Bipartite Graph MCM,,,,,,,,,[https://www.sciencedirect.com/science/article/pii/0743731584900042 Sahni et al. (1984)],Sahni et al.,1984,https://www.sciencedirect.com/science/article/pii/0743731584900042,,,,,,,,O(log^2 n),O(log^2 n),https://www.sciencedirect.com/science/article/pii/S0167819107001329,O(n log^2 n),https://www.sciencedirect.com/science/article/pii/S0167819107001329,no,,,,,PRAM,,,,,,,,,0,,0,,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+28,Maximum Cardinality Matching,0.001,,,,,,,,,,,Pawagi et al.,1987,,,,,,,,,O(log^2 n),O(log^2 n),https://www.sciencedirect.com/science/article/pii/S0167819107001329,O(n log^2 n),https://www.sciencedirect.com/science/article/pii/S0167819107001329,no,,,,,PRAM,,,,,,,,,0,,0,,0,1,O(n),,,,,,,,,,,,,,,,,,,,,,,,,,,
+32,Cycle Detection,0,,,,,,,,,,,Savage,1977,https://apps.dtic.mil/sti/citations/ADA056888,,,,,,,,O(log^2(n)),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+38,Optimal Binary Search Trees,1,Approximate OBST,350,,,1,0,O(n^0.6),,,[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.6940&rep=rep1&type=pdf Karpinski (1996)],Karpinski,1996,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.6940&rep=rep1&type=pdf,,,,0,0,2.6,n: 2.6,O(n^{0.6}),$O(n^{0.6})$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.6940&rep=rep1&type=pdf,$O(n^{1.6})$?,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.6940&rep=rep1&type=pdf,no,n: number of elements,n,,,CREW PRAM,,1,n: 1,O(1),Derived: dynamic programming and making use of Monge matrix properties,1,0,,0,,1,\epsilon = o(1),0,1,n,0,0,,"an optimal binary search tree (Optimal BST); sometimes called a weight-balanced
+ binary tree; is a binary search tree which provides the smallest possible search
+ time (or expected search time) for a given sequence of accesses
+ (or access probabilities). Optimal BSTs are generally divided
+ into two types: static and dynamic.",,,,,,,,,,,63,,,,,,,,,1,,,Combinatorics
+55,Variance Calculations,1,,452,,0,1,1,O(log n),Any distribution of values?,(need to read entire input),[http://i.stanford.edu/pub/cstr/reports/cs/tr/79/773/CS-TR-79-773.pdf Chan's algorithm Parallel Implementation (1979)],Chan's algorithm Parallel Implementation,1979,http://i.stanford.edu/pub/cstr/reports/cs/tr/79/773/CS-TR-79-773.pdf,,,,0,0,2,n: 2,O(\log n),$O(\log n)$,https://dbs.ifi.uni-heidelberg.de/files/Team/eschubert/publications/SSDBM18-covariance-authorcopy.pdf,$O(n\log n)$,https://dbs.ifi.uni-heidelberg.de/files/Team/eschubert/publications/SSDBM18-covariance-authorcopy.pdf,no,n: number of values,n,,,EREW(??) PRAM,words,3,n: 3,O(1) per processor,"Each processor maintains O(1) information related to count, mean, M2",1,0,,0,,0,,0,1,O(n),0,0,https://dbs.ifi.uni-heidelberg.de/files/Team/eschubert/publications/SSDBM18-covariance-authorcopy.pdf,,,,,,,,,,,,1,,,,,,,,,6,,,Numerical Analysis
+56,Topological Sorting,1,Topological Sorting,455,,,1,1,O( log² V),,,[https://www.proquest.com/docview/920003939?pq-origsite=gscholar&fromopenview=true Dekel; Nassimi & Sahni Parallel Implementation  (1981)],Dekel; Nassimi & Sahni Parallel Implementation ,1981,https://www.proquest.com/docview/920003939?pq-origsite=gscholar&fromopenview=true,,,,0,0,2,V: 2,O(\log^2 V),$O(\log^2 V)$,https://www.proquest.com/docview/920003939?fromopenview=true&pq-origsite=gscholar&parentSessionId=sFqBaY3zmnfUFqEv4cfbNEqD%2FS7jMtMwgheB67Bgqws%3D,$O(V^3\log^2 V)$?,https://www.proquest.com/docview/920003939?fromopenview=true&pq-origsite=gscholar&parentSessionId=sFqBaY3zmnfUFqEv4cfbNEqD%2FS7jMtMwgheB67Bgqws%3D,no,"V: number of vertices
+E: number of edges",V,,,"PRAM (not sure what type), SIMD computers?",words,5,V: 5,O(V^2)??,"Their n*n*n cube setup seems to only require each processor to keep track of one entry A[i, j], B[i, j] and propagates the results across the structure, only requiring O(1) auxiliary space per processor. Comparison sorting can be done easily with O(1) auxiliary space per processor.",1,0,,0,,0,,0,1,O(V^3)?,0,0,,,,,,,,,,,,,,,,,,,,,,6,,,Combinatorics
+56,Topological Sorting,0.001,Topological Sorting,,,,1,1,O( log² n),,,[https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703  (1991)],,1991,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703,,,,0,0,#N/A,V: 2,O(\log^2 n),$O(\log^2 n)$,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703,$O(M(n)logn)$,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703,no,"n: number of vertices,
+M(n) - number of processors needed to multiply two n x n matrices
+
+
+
+",n,,,PRAM,words,#N/A,V: 5,O(V^2)??,"Their n*n*n cube setup seems to only require each processor to keep track of one entry A[i, j], B[i, j] and propagates the results across the structure, only requiring O(1) auxiliary space per processor. Comparison sorting can be done easily with O(1) auxiliary space per processor.",1,0,,0,,0,,0,1,O(M(n) / logn),0,0,,,,,,,,,,,,,,,,,,,,,,6,,,Combinatorics
+56,Topological Sorting,0.001,Topological Sorting,,,,1,1,O(log n),,,[https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703  (1991)],,1991,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703,,,,0,0,#N/A,V: 2,O(log n),O(log n),https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703,$O(n^3 logn)$,https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=581703,no,n: number of vertices,n,,,PARBS,words,#N/A,V: 5,O(V^2)??,"Their n*n*n cube setup seems to only require each processor to keep track of one entry A[i, j], B[i, j] and propagates the results across the structure, only requiring O(1) auxiliary space per processor. Comparison sorting can be done easily with O(1) auxiliary space per processor.",1,0,,0,,0,,0,1,O(n^3)?,0,0,,,,,,,,,,,,,,,,,,,,,,6,,,Combinatorics
+56,Topological Sorting,0.001,Topological Sorting,,,,1,1,O(log n),,,[https://www.semanticscholar.org/paper/Parallel-algorithms%3A-design-and-analysis-Chaudhuri/b839df4f1527853960e4979d2066fbb07e3debe5  (1992)],,1992,https://www.semanticscholar.org/paper/Parallel-algorithms%3A-design-and-analysis-Chaudhuri/b839df4f1527853960e4979d2066fbb07e3debe5,,,,0,0,#N/A,V: 2,O(log n),O(log n),https://www.semanticscholar.org/paper/Parallel-algorithms%3A-design-and-analysis-Chaudhuri/b839df4f1527853960e4979d2066fbb07e3debe5,$O(n^3 logn)$,https://www.semanticscholar.org/paper/Parallel-algorithms%3A-design-and-analysis-Chaudhuri/b839df4f1527853960e4979d2066fbb07e3debe5,no,n: number of vertices,n,,,CRCW PRAM,words,#N/A,V: 5,O(V^2)??,"Their n*n*n cube setup seems to only require each processor to keep track of one entry A[i, j], B[i, j] and propagates the results across the structure, only requiring O(1) auxiliary space per processor. Comparison sorting can be done easily with O(1) auxiliary space per processor.",1,0,,0,,0,,0,1,O(n^3)?,0,0,,,,,,,,,,,,,,,,,,,,,,6,,,Combinatorics
+56,Topological Sorting,0.001,Topological Sorting,,,,1,1,O(log n),,,[https://link.springer.com/article/10.1023/A:1022080713267  (2003)],,2003,https://link.springer.com/article/10.1023/A:1022080713267,,,,0,0,#N/A,V: 2,O(log n),O(log n),https://link.springer.com/article/10.1023/A:1022080713267,$O(n^3)$,https://link.springer.com/article/10.1023/A:1022080713267,no,n: number of vertices,n,,,PARBS,words,#N/A,V: 5,O(V^2)??,"Their n*n*n cube setup seems to only require each processor to keep track of one entry A[i, j], B[i, j] and propagates the results across the structure, only requiring O(1) auxiliary space per processor. Comparison sorting can be done easily with O(1) auxiliary space per processor.",1,0,,0,,0,,0,1,O(n^3 / log n)?,0,0,,,,,,,,,,,,,,,,,,,,,,6,,,Combinatorics
+56,Topological Sorting,0,,,,,,,,,,,Schudy,2008,https://dl.acm.org/doi/pdf/10.1145/1378533.1378560,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+58,Lowest Common Ancestor,1,Lowest Common Ancestor with Static Trees,,,,1,1,O(m+log(n)),,,[https://epubs.siam.org/doi/abs/10.1137/0217079?journalCode=smjcat Schieber; Vishkin [Parallel] (1988)],Schieber; Vishkin [Parallel],1988,https://epubs.siam.org/doi/abs/10.1137/0217079?journalCode=smjcat,,,,0,0,,,O(m+log(n)),$O(m+\log(n))$,https://epubs.siam.org/doi/epdf/10.1137/0217079,$O(m+n)$,https://epubs.siam.org/doi/epdf/10.1137/0217079,no,"n: number of vertices
+m: number of total number of operations (queries, links, and cuts)",,,,EREW PRAM,words,O(n) total (auxiliary?),n: 3,https://www.proquest.com/docview/919780720?pq-origsite=gscholar&fromopenview=true,,,,,0,,0,,0,1,O(n/log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,Combinatorics
+58,Lowest Common Ancestor,0.001,Lowest Common Ancestor with Static Trees,,,,1,1,O(m*log(h)),,,[https://www.schoolofhaskell.com/user/edwardk/online-lca Kmett (2015)],Kmett,2015,https://www.schoolofhaskell.com/user/edwardk/online-lca,,,,0,0,,,O(m*log(h)),,,,,,"n: number of vertices
+m: number of total number of operations (queries, links, and cuts)
+h: height of tree",,,,Word RAM,words,,,,,,,,0,,0,,0,1,O(n/log n),0,0,,,Has an implimentation.,,,,,,,,,,,,,,,,,,,,,,Combinatorics
+60,Clique Problems,0.001,"Enumerating Maximal Cliques, arbitrary graph",478,,,1,1,O(3^{(n/3)}) total work? (previously this cell said O(n^4)),,,[https://arxiv.org/pdf/1801.00202.pdf Segundo; Artieda;  Strash Parallel (2011)],Segundo; Artieda;  Strash Parallel,2011,https://arxiv.org/pdf/1801.00202.pdf,,,,0,-,8,n: 8,$O(3^{(n/3)})$ total work? (previously this cell said $O(n^4)$),,,,,,"n: number of vertices
+m: number of edges",n,,,Word RAM with bit parallelism,words,5,n: 5,O(n^2) auxiliary??,Keep track of an O(n)-sized recursive stack with O(n)-sized lists as elements? (this algo builds off of Bron-Kerbosch),1,0,,0,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,1,,,Combinatorics
+64,Delaunay Triangulation,0.001,Constuct Voronoi Diagram,,,,,,O(log^2 n),,,"[https://doi.org/10.1007/BF01762120 A. Aggarwal, B. Chazelle, L. Guibas, C. Ó'Dúnlaing, and C. Yap. 1988 (1988)]","A. Aggarwal, B. Chazelle, L. Guibas, C. Ó'Dúnlaing, and C. Yap. 1988",1988,https://doi.org/10.1007/BF01762120,,,,,,,,,$O(\log^2 n)$,https://doi.org/10.1007/BF01762120,$O(n\log^2 n)$,https://doi.org/10.1007/BF01762120,,n: number of points,n,,,CREW PRAM,,,,,,,,,0,,,,0,1,$O(n/\log n)$,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+64,Delaunay Triangulation,0.001,Constuct Voronoi Diagram,,,,,,O(log n log log n),,,"[https://link.springer.com/chapter/10.1007/BFb0032049 Cole, R., Goodrich, M.T., Dúnlaing, C.Ó. (1990)]","Cole, R., Goodrich, M.T., Dúnlaing, C.Ó.",1990,https://link.springer.com/chapter/10.1007/BFb0032049,,,,,,,,,$O(\log n \log \log n)$,https://link.springer.com/chapter/10.1007/BFb0032049,$O(n\log^2 n)$,https://link.springer.com/chapter/10.1007/BFb0032049,,n: number of points,n,,,CREW PRAM,,,,,,,,,0,,,,0,1,$O(n/\log n)$,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+64,Delaunay Triangulation,0.001,Constuct Voronoi Diagram,,,,,,O(log n) expected,,,"[https://dl.acm.org/doi/10.1145/140901.141924 B. C. Vemuri, R. Varadarajan, and N. Mayya. (1992)]","B. C. Vemuri, R. Varadarajan, and N. Mayya.",1992,https://dl.acm.org/doi/10.1145/140901.141924,,,,,,,,,$O(\log n)$,https://dl.acm.org/doi/10.1145/140901.141924,$O(n\log n)$,https://dl.acm.org/doi/10.1145/140901.141924,,n: number of points,n,,,CREW PRAM,,,,,,,,,0,,,,0,1,$O(n/\log n)$,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+64,Delaunay Triangulation,1,2D,,,,,,O(nlogn),,,"[Blelloch, G., Miller, G., Hardwick, J. et al. Design and Implementation of a Practical Parallel Delaunay Algorithm . Algorithmica 24, 243–269 (1999). https://doi.org/10.1007/PL00008262 Belloch (1999)]",Belloch,1999,"Blelloch, G., Miller, G., Hardwick, J. et al. Design and Implementation of a Practical Parallel Delaunay Algorithm . Algorithmica 24, 243–269 (1999). https://doi.org/10.1007/PL00008262",,,,,,,,$O(\log^3 n)$,$O(\log^3 n)$,https://link.springer.com/article/10.1007/PL00008262,$O(n\log n)$,https://link.springer.com/article/10.1007/PL00008262,,n: number of points,n,,,CREW PRAM,,,,,,,,,0,,,,0,1,$O(n/\log n)$,0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+64,Delaunay Triangulation,1,2-Dimensional Delaunay Triangulation,524,,,1,1,O(nlogn),,,[https://web.archive.org/web/20180425231851/https://www.cs.cmu.edu/~ygu1/paper/SPAA16/Incremental.pdf Belloch (2006)],Belloch,2006,https://web.archive.org/web/20180425231851/https://www.cs.cmu.edu/~ygu1/paper/SPAA16/Incremental.pdf,,,,0,0,4,n: 4,$O(\log^2 n)$,$O(\log^2 n)$,https://web.archive.org/web/20180425231851/https://www.cs.cmu.edu/~ygu1/paper/SPAA16/Incremental.pdf,$O(n\log n)$,https://web.archive.org/web/20180425231851/https://www.cs.cmu.edu/~ygu1/paper/SPAA16/Incremental.pdf,yes,n: number of points,n,,,CRCW PRAM,words,3,n: 3,O(n),"Keep track of triangles in current triangulation, based on which points have been added so far and which triangles to remove (see other incremental algos)",1,0,,1,Las Vegas?,0,,0,1,$O(n/\log n)$,0,0,,,,,,,,,,,,,9965,,,,,,,,,4,,,Combinatorics
+78,Stable Matching Problem,0.001,Almost Stable Marriage Problem,619,,,1,0,O(1),,,"[https://arxiv.org/pdf/0812.4893.pdf Valentin Polishchuk, and Jukka Suomela (2008)]","Valentin Polishchuk, and Jukka Suomela",2008,https://arxiv.org/pdf/0812.4893.pdf,,,,0,0,1,n: 1,$O(1+\Delta/\epsilon)$,$O(1+\Delta/\epsilon)$,https://arxiv.org/pdf/0812.4893.pdf,??,https://arxiv.org/pdf/0812.4893.pdf,no,"n: number of people in set
+Delta: maximum number of acceptable partners for one participant (usually O(1))
+eps: error term",n,,,,words,1,n: 1,O(1),derived: must be \leq time complexity,1,0,,0,,1,2 + \epsilon,0,1,,0,0,,,,,,,,,,,,,1,,,,,,,,,4,,,Combinatorics
+78,Stable Matching Problem,0.001,Stable Marriage Problem,618,,,1,1,O(n^2),,,[https://link.springer.com/content/pdf/10.1007/BF02136029.pdf S. S. TSENG and R. C. T. LEE (1984)],S. S. TSENG and R. C. T. LEE,1984,https://link.springer.com/content/pdf/10.1007/BF02136029.pdf,,,,0,0,5,n: 5,O(n^2),,,,,,n: number of men and number of women,n,,,Word RAM,words,3,n: 3,$O(n)$ per processor?,Only need to keep track of current (provisional) matchings,1,0,,0,,0,,0,1,,0,0,https://di.ku.dk/forskning/Publikationer/tekniske_rapporter/tekniske-rapporter-1997/97-05.pdf,,,,,,,,,,,,1000000,,,,,,,,,4,,,Combinatorics
+78,Stable Matching Problem,1,Stable Marriage Problem,620,,,1,1,O(n^{0.5}),,,"[http://theory.stanford.edu/~megiddo/pdf/soda94.pdf Tomas Feder, Nimrod Megiddo, Serge A. Plotkin (1994)]","Tomas Feder, Nimrod Megiddo, Serge A. Plotkin",1994,http://theory.stanford.edu/~megiddo/pdf/soda94.pdf,,,,0,0,2.5,n: 2.5,$O(\Delta^{0.5} \log^3(\Delta)$,$O(\Delta^{0.5} \log^3(\Delta)$,http://theory.stanford.edu/~megiddo/pdf/soda94.pdf,$O(\Delta^{4.5} \log^3(\Delta)$?,http://theory.stanford.edu/~megiddo/pdf/soda94.pdf,no,"n: number of men and number of women
+Delta: maximum number of acceptable partners for one participant",n,,,Word RAM,words,2.5,n: 2.5,$O(n^{0.5})$ auxiliary per processor?,bounded by runtime,1,0,,0,,0,,0,1,$\Delta^4$,0,0,,,,,,,,,,,,,31.62,,,,,,,,,4,,,Combinatorics
+80,Maximum Subarray Problem,1,1D Maximum Subarray,628,,,1,1,O(log n),^see above,^see above,[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf Perumalla and Deo (1995)],Perumalla and Deo,1995,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf,,,,0,0,2,n: 2,O(\log n),$O(\log n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf,$O(n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf,yes,n: length of array,n,,,EREW PRAM,words,3,n: 3,O(n) auxiliary,constant number of arrays as outlined in algorithm,1,0,,0,,0,,0,1,O(n/log n),0,0,,,,,,,,,,,,,9965,,,,,,,,,3,,,Combinatorics
+80,Maximum Subarray Problem,0.001,1D Maximum Subarray,629,,,1,1,O(log n),^see above,^see above,"[https://ieeexplore.ieee.org/document/6972008 Ferreira, Camargo, Song (2014)]","Ferreira, Camargo, Song",2014,https://ieeexplore.ieee.org/document/6972008,,,,0,0,2,n: 2,O(\log n),,,,,,n: length of array,n,,,EREW PRAM?,words,3,n: 3,O(n) auxiliary,constant number of arrays as outlined in algorithm,1,0,,0,,0,,0,1,O(n/log n),0,1,,,,,,,,,,,,,9965,,,,,,,,,3,,,Combinatorics
+80,Maximum subarray problem,1,1-dimensional,,,,1,1,O(log n),"""Any distribution/runtime same regardless of input""",(same general behavior regardless of input),[https://www.sciencedirect.com/science/article/abs/pii/016781919400063G Wen (1995)],Wen,1995,https://www.sciencedirect.com/science/article/abs/pii/016781919400063G,,,,,,,,O(log n),$O(\log n)$,https://www.sciencedirect.com/science/article/abs/pii/016781919400063G,$O(n)$,https://www.sciencedirect.com/science/article/abs/pii/016781919400063G,??,n: length of array,,,,EREW PRAM,words,,,,,,,,0,,0,,0,1,O(n/log n),0,0,,,,,,,,,,,,,,,,,,,,,,3,,,Combinatorics
+80,Maximum subarray problem,1,2-dimensional,,,,1,1,O(log^2 n),^see above,^see above,[https://www.sciencedirect.com/science/article/pii/0167642387900347 Smith (1987)],Smith,1987,https://www.sciencedirect.com/science/article/pii/0167642387900347,,,,,,,,O(log^2 n),$O(\log^2 n)$,https://www.sciencedirect.com/science/article/pii/0167642387900347,???,https://www.sciencedirect.com/science/article/pii/0167642387900347,no?,n: dimension of array,,,,PRAM (not sure which type),words,,,,,,,,0,,0,,0,1,?,0,0,,,,,,,,,,,,,,,,,,,,,,,,,Combinatorics
+80,Maximum subarray problem,1,2-dimensional,,,,1,1,O(log n),^see above,^see above,[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf KALYAN PERUMALLA and NARSINGH DEO (1995)],KALYAN PERUMALLA and NARSINGH DEO,1995,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf,,,,,,,,O(log n),$O(\log n)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf,$O(n^3)$,https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.24.1291&rep=rep1&type=pdf,yes,n: dimension of array,,,,CREW PRAM,words,,,,,,,,0,,0,,0,1,O(n^3 / log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,Combinatorics
+80,Maximum subarray problem,1,2-dimensional,,,,1,1,O(log n),^see above,^see above,[https://www.sciencedirect.com/science/article/abs/pii/016781919400063G Wen (1995)],Wen,1995,https://www.sciencedirect.com/science/article/abs/pii/016781919400063G,,,,,,,,O(log n),$O(\log n)$,https://www.sciencedirect.com/science/article/abs/pii/016781919400063G,$O(n^3)$,https://www.sciencedirect.com/science/article/abs/pii/016781919400063G,??,n: dimension of array,,,,EREW PRAM,words,,,,,,,,0,,0,,0,1,O(n^3 / log n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,Combinatorics
+81,Constructing Suffix Trees,1,Constructing Suffix Trees,635,,,1,1,O(log^4(n)),,,[https://www.sciencedirect.com/science/article/pii/S0022000097914963 Hariharan (1997)],Hariharan,1997,https://www.sciencedirect.com/science/article/pii/S0022000097914963,,,,0,0,2.03,n: 2.03,O(log^4(n)),$O(\log^4(n))$,https://www.sciencedirect.com/science/article/pii/S0022000097914963,$O(n)$,https://www.sciencedirect.com/science/article/pii/S0022000097914963,yes,n: length of string,n,,,CREW PRAM,words,3,n: 3,O(n),https://www.sciencedirect.com/science/article/pii/S0022000097914963,0,1,,0,,0,,0,1,$O(n/\log^4(n))$?,0,0,,,,,,,,,,,,,9860.7,,,,,,,,,4,,,Combinatorics
+81,Constructing Suffix Trees,1,Constructing Suffix Trees,636,,,1,1,O(log^2(n)),,,[https://link.springer.com/content/pdf/10.1007/3-540-57811-0_3.pdf Süleyman Cenk Sahinalp ; Uzi Vishkin (1994)],Süleyman Cenk Sahinalp ; Uzi Vishkin,1994,https://link.springer.com/content/pdf/10.1007/3-540-57811-0_3.pdf,,,,1,0,2.01,n: 2.01,$O(n^\epsilon)$,$O(n^\epsilon)$,https://link.springer.com/content/pdf/10.1007/3-540-57811-0_3.pdf,$O(n \log^* n)$,https://link.springer.com/content/pdf/10.1007/3-540-57811-0_3.pdf,no,"n: length of string
+epsilon: time/space parameter",n,,,CRCW PRAM,words,4.01,n: 4.01,$O(n^{(1+\eps)})$ for any fixed eps>0,https://link.springer.com/content/pdf/10.1007/3-540-57811-0_3.pdf,0,1,,0,,0,,0,1,,0,0,,,,,,,,,,,,,99.3,100.3524673,,397.2674256,0,,893.8517077,0,,4,,,Combinatorics
+81,Constructing Suffix Trees,1,Constructing Suffix Trees,637,,,1,1,O(log n),,,[https://www.cs.rutgers.edu/~farach/pubs/PRAMSuffixICALP.pdf Farach (1997)],Farach,1997,https://www.cs.rutgers.edu/~farach/pubs/PRAMSuffixICALP.pdf,,,,0,0,2,n: 2,O(\log n),$O(\log n)$,https://people.cs.rutgers.edu/~farach/pubs/PRAMSuffixICALP.pdf,$O(n)$,https://people.cs.rutgers.edu/~farach/pubs/PRAMSuffixICALP.pdf,yes,n: length of string,n,,,CRCW PRAM,words,3,n: 3,O(n),https://www.cs.rutgers.edu/~farach/pubs/PRAMSuffixICALP.pdf,0,1,,1,Las Vegas,0,,0,1,$O(n)$?,0,0,,,,,,,,,,,,,1000,,,,,,,,,4,,,Combinatorics
+81,Constructing Suffix Trees,1,Constructing Suffix Trees,638,,,1,1,O(logn),,,[https://www.researchgate.net/publication/228945502_On_parallel_transformations_of_suffix_arrays_into_suffix_trees Rytter (2004)],Rytter,2004,https://www.researchgate.net/publication/228945502_On_parallel_transformations_of_suffix_arrays_into_suffix_trees,,,,1,6->7,2,n: 2,O(\log n),$O(\log n)$,https://www.researchgate.net/publication/228945502_On_parallel_transformations_of_suffix_arrays_into_suffix_trees,$O(n\log n)$,https://www.researchgate.net/publication/228945502_On_parallel_transformations_of_suffix_arrays_into_suffix_trees,no,n: length of string,n,,,CREW PRAM,words,3,n: 3,O(n),https://www.researchgate.net/publication/228945502_On_parallel_transformations_of_suffix_arrays_into_suffix_trees,0,1,,0,,0,,0,1,$O(n)$,0,0,,,,,,,,,,,,,9.965,1000,,19.93156857,0,,29.89735285,0,,4,,,Combinatorics
+82,Ray Tracing,0.001,,643,,,0,0,O(n^2),,,[https://www.academia.edu/814419/A_New_Parallel_Algorithm_Provided_by_a_Computation_Time_Model J.-C. Nebel 1998 (1998)],J.-C. Nebel 1998,1998,https://www.academia.edu/814419/A_New_Parallel_Algorithm_Provided_by_a_Computation_Time_Model,,,,0,0,5,n: 5,O(n^2),,,,,,,n,,,,,#VALUE!,,,,,,,0,,1,,0,1,,0,0,,,,,,,,,,,,,1000000,,,,,,,,,4,,,Image Processing
+82,Ray Tracing,0.001,,644,,,0,0,O(n^2),,,[ A. Chalmers; T. Davis; and E. Reinhard 2002 (2002)],A. Chalmers; T. Davis; and E. Reinhard 2002,2002,,,,,0,0,5,n: 5,O(n^2),,,,,,,n,,,,,#VALUE!,,,,,,,0,,1,,0,1,,0,0,,,,,,,,,,,,,1000000,,,,,,,,,4,,,Image Processing
+86,Graph Isomorphism Problem,0.001,Subgraph Isomorphism,665,,,1,1,"Asymptotics not given, actual times. Check",,,[https://dl.acm.org/doi/10.1145/321921.321925 Ullman (1976)],Ullman,1976,https://dl.acm.org/doi/10.1145/321921.321925,,,,1,0,#VALUE!,,,,,,,,"n: max number of vertices between the two graphs
+m: min number of vertices between the two graphs",n,,,Word RAM,words, 3m,"n: 3
+m: 3",O(mn)?,"Stores a constant number of n*m matrices, along with a constant number of vectors of length O(m+n)",1,0,,0,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,1,,,Combinatorics
+98,The Set-Covering Problem,1,,774,,,1,1,O(n^2),,,[https://www.semanticscholar.org/paper/An-efficient-distributed-algorithm-for-computing-Cardoso-Abreu/ce32696c1176800c5b90fab026bf93f282e2b161 Cardoso; Nuno; Abreu; Rui (2014)],Cardoso; Nuno; Abreu; Rui,2014,https://www.semanticscholar.org/paper/An-efficient-distributed-algorithm-for-computing-Cardoso-Abreu/ce32696c1176800c5b90fab026bf93f282e2b161,,,,0,0,5,n: 5,O(n^2),,,,,,,n,,,,,#VALUE!,,,,,,,0,,0,,1,1,,0,0,,,,,,,,,,,,,,,,,,,,,,1,,,Combinatorics
+117,Maximum Cut,0,,,,,1,1,,,,[https://link.springer.com/chapter/10.1007/3-540-46674-6_4  (1999)],,1999,https://link.springer.com/chapter/10.1007/3-540-46674-6_4,,,,,,,,,,,,,,,,,,CRCW PRAM,,,,,,,,,,,1,1.333...,0,1,O(n),0,0,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+122,Sequence-to-Graph Alignment,0.001,Sequence-to-Graph Alignment,938,,,1,1,O(V + mE),,,"[https://www.ncbi.nlm.nih.gov/pubmed/30851095 Rautiainen, Marschall (2019)]","Rautiainen, Marschall",2019,https://www.ncbi.nlm.nih.gov/pubmed/30851095,,,,0,0,5,"V: 5,
+E: 3,
+m: 3,
+N: 5",$O(V + mE\log w)$,,,,,,"m: length of input sequence
+V: number of vertices
+E: number of edges
+w: size of word",N,https://www.ncbi.nlm.nih.gov/pubmed/30851095,0,Word RAM,words,3,"V: 3,
+m: 3,
+N: 3",O(mV),"Derived: algorithm uses a V-sized array of bitvectors each of which is of length m, and also uses a priority queue which has at most V elements. The precomputed pattern bitvectors also takes up O(V * m) space.",1,0,,0,,0,,0,1,,0,0,,,,,,,,,,,,,,,,,,,,,,3,,,Combinatorics
